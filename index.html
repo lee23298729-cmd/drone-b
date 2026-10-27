@@ -57,7 +57,7 @@
             flex-shrink: 0;
             background-color: #ffffff;
             border-radius: 10px;
-            padding: 4px;
+            padding: 3px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -98,7 +98,7 @@
             flex-shrink: 0;
             background-color: #ffffff;
             border-radius: 32px;
-            padding: 14px;
+            padding: 8px;
             box-shadow: 0 10px 30px rgba(140, 224, 255, 0.25);
             display: flex;
             align-items: center;
@@ -229,27 +229,35 @@
 </head>
 <body>
 
-    <!-- 단일 순환 화살표 + 중앙 드론 SVG 심볼 정의 -->
+    <!-- 중앙 배치 & 확대된 단일 순환 화살표 드론 SVG 심볼 -->
     <svg style="display: none;">
         <symbol id="drone-recycle-icon" viewBox="0 0 100 100">
-            <!-- 단일 원형 회전 화살표 -->
-            <path d="M 75 38 A 30 30 0 1 0 78 62" fill="none" stroke="#6bd2ff" stroke-width="6" stroke-linecap="round"/>
-            <path d="M 69 28 L 78 38 L 88 30" fill="none" stroke="#6bd2ff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- 드론을 완벽히 감싸는 확대된 원형 순환 화살표 -->
+            <path d="M 83 38 A 38 38 0 1 0 88 62" fill="none" stroke="#6bd2ff" stroke-width="6" stroke-linecap="round"/>
+            <path d="M 76 28 L 88 38 L 98 28" fill="none" stroke="#6bd2ff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
             
-            <!-- 중앙 드론 -->
-            <g stroke="#3aa8db" stroke-width="3.2" stroke-linecap="round">
-                <line x1="38" y1="38" x2="62" y2="62"/>
-                <line x1="62" y1="38" x2="38" y2="62"/>
-                <circle cx="50" cy="50" r="9" fill="white" stroke-width="2.5"/>
-                <circle cx="50" cy="50" r="3.5" fill="#3aa8db"/>
-                <circle cx="34" cy="34" r="2" fill="white" stroke-width="1.5"/>
-                <line x1="28" y1="34" x2="40" y2="34" stroke-width="2"/>
-                <circle cx="66" cy="34" r="2" fill="white" stroke-width="1.5"/>
-                <line x1="60" y1="34" x2="72" y2="34" stroke-width="2"/>
-                <circle cx="34" cy="66" r="2" fill="white" stroke-width="1.5"/>
-                <line x1="28" y1="66" x2="40" y2="66" stroke-width="2"/>
-                <circle cx="66" cy="66" r="2" fill="white" stroke-width="1.5"/>
-                <line x1="60" y1="66" x2="72" y2="66" stroke-width="2"/>
+            <!-- 완전 중앙(50, 50)에 위치한 확대된 드론 -->
+            <g stroke="#3aa8db" stroke-width="4" stroke-linecap="round">
+                <!-- X자 암 프레임 -->
+                <line x1="33" y1="33" x2="67" y2="67"/>
+                <line x1="67" y1="33" x2="33" y2="67"/>
+                
+                <!-- 중앙 카메라 렌즈 -->
+                <circle cx="50" cy="50" r="11" fill="white" stroke-width="3"/>
+                <circle cx="50" cy="50" r="4" fill="#3aa8db"/>
+                
+                <!-- 4개 모터 및 프로펠러 -->
+                <circle cx="29" cy="29" r="2.5" fill="white" stroke-width="2"/>
+                <line x1="21" y1="29" x2="37" y2="29" stroke-width="2.8"/>
+
+                <circle cx="71" cy="29" r="2.5" fill="white" stroke-width="2"/>
+                <line x1="63" y1="29" x2="79" y2="29" stroke-width="2.8"/>
+
+                <circle cx="29" cy="71" r="2.5" fill="white" stroke-width="2"/>
+                <line x1="21" y1="71" x2="37" y2="71" stroke-width="2.8"/>
+
+                <circle cx="71" cy="71" r="2.5" fill="white" stroke-width="2"/>
+                <line x1="63" y1="71" x2="79" y2="71" stroke-width="2.8"/>
             </g>
         </symbol>
     </svg>
