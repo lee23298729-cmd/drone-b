@@ -52,6 +52,7 @@
         .logo-icon {
             width: 42px;
             height: 42px;
+            flex-shrink: 0;
         }
 
         nav a {
@@ -79,6 +80,7 @@
             width: 140px;
             height: 140px;
             margin-bottom: 1.5rem;
+            flex-shrink: 0;
         }
 
         .hero h1 {
@@ -165,7 +167,7 @@
 </head>
 <body>
 
-    <!-- 재활용 + 드론 상징 연한 하늘색 라인 SVG 테이프 아이콘 -->
+    <!-- 재활용 + 드론 상징 연한 하늘색 라인 SVG 아이콘 -->
     <svg style="display: none;">
         <symbol id="drone-recycle-icon" viewBox="0 0 500 500">
             <!-- 라운드 모서리 테두리 -->
@@ -205,7 +207,7 @@
 
     <header>
         <a href="#" class="logo">
-            <svg class="logo-icon"><use href="#drone-recycle-icon"/></svg>
+            <svg class="logo-icon" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet"><use href="#drone-recycle-icon"/></svg>
             <span>wing again</span>
         </a>
         <nav>
@@ -215,7 +217,7 @@
     </header>
 
     <section class="hero">
-        <svg class="hero-icon"><use href="#drone-recycle-icon"/></svg>
+        <svg class="hero-icon" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet"><use href="#drone-recycle-icon"/></svg>
         <h1>wing again</h1>
         <p>나 다시 날아갈래</p>
     </section>
