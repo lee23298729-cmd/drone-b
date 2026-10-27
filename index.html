@@ -50,13 +50,22 @@
             text-decoration: none;
         }
 
-        /* 헤더 로고 이미지 */
-        .logo-img {
+        .logo-icon-box {
             width: 42px;
             height: 42px;
-            object-fit: contain;
-            border-radius: 10px;
+            flex-shrink: 0;
             background-color: #ffffff;
+            border-radius: 10px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon-box svg {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
 
         nav a {
@@ -80,15 +89,24 @@
             align-items: center;
         }
 
-        /* 히어로 섹션 메인 로고 이미지 */
-        .hero-img {
+        .hero-icon-box {
             width: 140px;
             height: 140px;
-            object-fit: contain;
             margin-bottom: 1.5rem;
-            border-radius: 32px;
+            flex-shrink: 0;
             background-color: #ffffff;
+            border-radius: 32px;
+            padding: 12px;
             box-shadow: 0 10px 30px rgba(140, 224, 255, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-icon-box svg {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
 
         .hero h1 {
@@ -105,7 +123,6 @@
             margin-bottom: 1.2rem;
         }
 
-        /* 회사 모토 (슬로건) */
         .hero .motto {
             font-size: 1rem;
             color: var(--text-sub);
@@ -209,9 +226,50 @@
 </head>
 <body>
 
+    <!-- 드론 형태 + 선명한 재활용 순환 표시 SVG -->
+    <svg style="display: none;">
+        <symbol id="drone-recycle-icon" viewBox="0 0 200 200">
+            <!-- 둥근 테두리 상자 -->
+            <rect x="8" y="8" width="184" height="184" rx="42" fill="none" stroke="#48cae4" stroke-width="6"/>
+            
+            <!-- 외곽 재활용 순환 화살표 (상단 & 하단 반원) -->
+            <!-- 상단 반원 화살표 -->
+            <path d="M 36 100 A 64 64 0 0 1 164 100" fill="none" stroke="#48cae4" stroke-width="8" stroke-linecap="round"/>
+            <path d="M 148 84 L 164 100 L 148 116" fill="none" stroke="#48cae4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- 하단 반원 화살표 -->
+            <path d="M 164 100 A 64 64 0 0 1 36 100" fill="none" stroke="#48cae4" stroke-width="8" stroke-linecap="round"/>
+            <path d="M 52 116 L 36 100 L 52 84" fill="none" stroke="#48cae4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- 중앙 또렷한 드론 구조 -->
+            <!-- 드론 프레임 (X 축) -->
+            <line x1="72" y1="72" x2="128" y2="128" stroke="#00b4d8" stroke-width="8" stroke-linecap="round"/>
+            <line x1="128" y1="72" x2="72" y2="128" stroke="#00b4d8" stroke-width="8" stroke-linecap="round"/>
+            
+            <!-- 중앙 카메라 렌즈 -->
+            <circle cx="100" cy="100" r="16" fill="#ffffff" stroke="#00b4d8" stroke-width="6"/>
+            <circle cx="100" cy="100" r="6" fill="#00b4d8"/>
+            
+            <!-- 프로펠러 4개 (좌상, 우상, 좌하, 우하) -->
+            <circle cx="68" cy="68" r="5" fill="#ffffff" stroke="#00b4d8" stroke-width="4"/>
+            <line x1="52" y1="68" x2="84" y2="68" stroke="#00b4d8" stroke-width="5" stroke-linecap="round"/>
+
+            <circle cx="132" cy="68" r="5" fill="#ffffff" stroke="#00b4d8" stroke-width="4"/>
+            <line x1="116" y1="68" x2="148" y2="68" stroke="#00b4d8" stroke-width="5" stroke-linecap="round"/>
+
+            <circle cx="68" cy="132" r="5" fill="#ffffff" stroke="#00b4d8" stroke-width="4"/>
+            <line x1="52" y1="132" x2="84" y2="132" stroke="#00b4d8" stroke-width="5" stroke-linecap="round"/>
+
+            <circle cx="132" cy="132" r="5" fill="#ffffff" stroke="#00b4d8" stroke-width="4"/>
+            <line x1="116" y1="132" x2="148" y2="132" stroke="#00b4d8" stroke-width="5" stroke-linecap="round"/>
+        </symbol>
+    </svg>
+
     <header>
         <a href="#" class="logo">
-            <img class="logo-img" src="https://storage.googleapis.com/generativeai-downloads/images/drone_recycle_logo_clean.png" alt="wing again 로고" onError="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'none\' stroke=\'%236bd2ff\' stroke-width=\'5\'><rect width=\'100\' height=\'100\' rx=\'20\' fill=\'white\'/><path d=\'M30 50 A20 20 0 0 1 70 50 L63 43 M70 50 L63 57\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/><path d=\'M70 50 A20 20 0 0 1 30 50 L37 57 M30 50 L37 43\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/><line x1=\'40\' y1=\'40\' x2=\'60\' y2=\'60\' stroke-width=\'4\'/><line x1=\'60\' y1=\'40\' x2=\'40\' y2=\'60\' stroke-width=\'4\'/><circle cx=\'50\' cy=\'50\' r=\'6\' fill=\'white\' stroke-width=\'3\'/></svg>'">
+            <div class="logo-icon-box">
+                <svg viewBox="0 0 200 200"><use href="#drone-recycle-icon"/></svg>
+            </div>
             <span>wing again</span>
         </a>
         <nav>
@@ -221,7 +279,9 @@
     </header>
 
     <section class="hero">
-        <img class="hero-img" src="https://storage.googleapis.com/generativeai-downloads/images/drone_recycle_logo_clean.png" alt="wing again 대형 로고" onError="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'none\' stroke=\'%236bd2ff\' stroke-width=\'5\'><rect width=\'100\' height=\'100\' rx=\'20\' fill=\'white\'/><path d=\'M30 50 A20 20 0 0 1 70 50 L63 43 M70 50 L63 57\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/><path d=\'M70 50 A20 20 0 0 1 30 50 L37 57 M30 50 L37 43\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/><line x1=\'40\' y1=\'40\' x2=\'60\' y2=\'60\' stroke-width=\'4\'/><line x1=\'60\' y1=\'40\' x2=\'40\' y2=\'60\' stroke-width=\'4\'/><circle cx=\'50\' cy=\'50\' r=\'6\' fill=\'white\' stroke-width=\'3\'/></svg>'">
+        <div class="hero-icon-box">
+            <svg viewBox="0 0 200 200"><use href="#drone-recycle-icon"/></svg>
+        </div>
         <h1>wing again</h1>
         <div class="sub-title">나 다시 날아갈래</div>
         
