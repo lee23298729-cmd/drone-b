@@ -50,7 +50,6 @@
             text-decoration: none;
         }
 
-        /* 찌그러짐 원천 방지를 위한 1:1 정비율 박스 */
         .logo-icon-box {
             width: 40px;
             height: 40px;
@@ -199,41 +198,44 @@
 </head>
 <body>
 
-    <!-- 완벽하게 비율이 잡힌 재활용 + 드론 SVG 심볼 정의 -->
+    <!-- 반원 2개 순환 화살표 + 정중앙 드론 SVG 심볼 -->
     <svg style="display: none;">
         <symbol id="drone-recycle-icon" viewBox="0 0 100 100">
-            <!-- 외곽 둥근 모서리 사각형 테두리 -->
+            <!-- 외곽 둥근 모서리 테두리 -->
             <rect x="6" y="6" width="88" height="88" rx="20" fill="none" stroke="#8ce0ff" stroke-width="4"/>
             
-            <!-- 순환 재활용 화살표 3개 -->
-            <path d="M 45 20 A 30 30 0 0 1 74 42" fill="none" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round"/>
-            <path d="M 68 36 L 76 43 L 79 33" fill="none" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- 상단 반원 화살표 (시계 방향: 시점 좌하단 -> 종점 우상단) -->
+            <path d="M 18 50 A 32 32 0 0 1 82 50" fill="none" stroke="#8ce0ff" stroke-width="4" stroke-linecap="round"/>
+            <path d="M 74 42 L 82 50 L 74 58" fill="none" stroke="#8ce0ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 
-            <path d="M 76 56 A 30 30 0 0 1 32 75" fill="none" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round"/>
-            <path d="M 39 74 L 30 78 L 36 68" fill="none" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- 하단 반원 화살표 (시계 방향: 시점 우상단 -> 종점 좌하단) -->
+            <path d="M 82 50 A 32 32 0 0 1 18 50" fill="none" stroke="#8ce0ff" stroke-width="4" stroke-linecap="round"/>
+            <path d="M 26 58 L 18 50 L 26 42" fill="none" stroke="#8ce0ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 
-            <path d="M 26 62 A 30 30 0 0 1 38 23" fill="none" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round"/>
-            <path d="M 34 29 L 39 21 L 45 28" fill="none" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-            <!-- 정중앙 드론 아이콘 -->
+            <!-- 중앙 드론 (X축 암 + 카메라 + 모터 4개) -->
             <g transform="translate(0, 0)">
-                <line x1="36" y1="36" x2="64" y2="64" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round"/>
-                <line x1="64" y1="36" x2="36" y2="64" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round"/>
+                <line x1="37" y1="37" x2="63" y2="63" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round"/>
+                <line x1="63" y1="37" x2="37" y2="64" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round"/>
                 
-                <circle cx="50" cy="50" r="9" fill="#0b132b" stroke="#8ce0ff" stroke-width="3"/>
-                <circle cx="50" cy="50" r="3" fill="#8ce0ff"/>
+                <!-- 중앙 카메라 -->
+                <circle cx="50" cy="50" r="8" fill="#0b132b" stroke="#8ce0ff" stroke-width="3"/>
+                <circle cx="50" cy="50" r="2.5" fill="#8ce0ff"/>
                 
-                <circle cx="32" cy="32" r="2.5" fill="#0b132b" stroke="#8ce0ff" stroke-width="1.8"/>
-                <line x1="24" y1="32" x2="40" y2="32" stroke="#8ce0ff" stroke-width="2" stroke-linecap="round"/>
+                <!-- 좌상단 프로펠러 -->
+                <circle cx="34" cy="34" r="2" fill="#0b132b" stroke="#8ce0ff" stroke-width="1.8"/>
+                <line x1="27" y1="34" x2="41" y2="34" stroke="#8ce0ff" stroke-width="2" stroke-linecap="round"/>
                 
-                <circle cx="68" cy="32" r="2.5" fill="#0b132b" stroke="#8ce0ff" stroke-width="1.8"/>
-                <line x1="60" y1="32" x2="76" y2="32" stroke="#8ce0ff" stroke-width="2" stroke-linecap="round"/>
+                <!-- 우상단 프로펠러 -->
+                <circle cx="66" cy="34" r="2" fill="#0b132b" stroke="#8ce0ff" stroke-width="1.8"/>
+                <line x1="59" y1="34" x2="73" y2="34" stroke="#8ce0ff" stroke-width="2" stroke-linecap="round"/>
                 
-                <circle cx="32" cy="68" r="2.5" fill="#0b132b" stroke="#8ce0ff" stroke-width="1.8"/>
-                <line x1="24" y1="68" x2="40" y2="68" stroke="#8ce0ff" stroke-width="2" stroke-linecap="round"/>
+                <!-- 좌하단 프로펠러 -->
+                <circle cx="34" cy="66" r="2" fill="#0b132b" stroke="#8ce0ff" stroke-width="1.8"/>
+                <line x1="27" y1="66" x2="41" y2="66" stroke="#8ce0ff" stroke-width="2" stroke-linecap="round"/>
                 
-                <circle cx="68" cy="68" r="2.5" fill="#0b132b" stroke="#8ce0ff" stroke-width="1.8"/>
-                <line x1="60" y1="68" x2="76" y2="68" stroke="#8ce0ff" stroke-width="2" stroke-linecap="round"/>
+                <!-- 우하단 프로펠러 -->
+                <circle cx="66" cy="66" r="2" fill="#0b132b" stroke="#8ce0ff" stroke-width="1.8"/>
+                <line x1="59" y1="66" x2="73" y2="66" stroke="#8ce0ff" stroke-width="2" stroke-linecap="round"/>
             </g>
         </symbol>
     </svg>
