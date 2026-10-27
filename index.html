@@ -50,7 +50,7 @@
             text-decoration: none;
         }
 
-        /* 찌그러짐 방지 1:1 정비율 고정 박스 */
+        /* 헤더 로고 박스 (1:1 정비율 고정) */
         .logo-icon-box {
             width: 42px;
             height: 42px;
@@ -90,7 +90,7 @@
             align-items: center;
         }
 
-        /* 메인 대형 로고 고정 박스 */
+        /* 메인 대형 로고 박스 */
         .hero-icon-box {
             width: 140px;
             height: 140px;
@@ -229,35 +229,38 @@
 </head>
 <body>
 
-    <!-- 중앙 배치 & 확대된 단일 순환 화살표 드론 SVG 심볼 -->
+    <!-- 중앙 대칭 + 또렷한 화살표 촉 정밀 SVG 심볼 -->
     <svg style="display: none;">
         <symbol id="drone-recycle-icon" viewBox="0 0 100 100">
-            <!-- 드론을 완벽히 감싸는 확대된 원형 순환 화살표 -->
-            <path d="M 83 38 A 38 38 0 1 0 88 62" fill="none" stroke="#6bd2ff" stroke-width="6" stroke-linecap="round"/>
-            <path d="M 76 28 L 88 38 L 98 28" fill="none" stroke="#6bd2ff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- 1. 정중앙(50,50) 기점 대칭 원형 순환 화살표 (반지름 r=36) -->
+            <!-- 원형 호 (약 300도 회전 순환) -->
+            <path d="M 75.46 24.54 A 36 36 0 1 0 82.5 68" fill="none" stroke="#6bd2ff" stroke-width="5.5" stroke-linecap="round"/>
             
-            <!-- 완전 중앙(50, 50)에 위치한 확대된 드론 -->
-            <g stroke="#3aa8db" stroke-width="4" stroke-linecap="round">
+            <!-- 화살표 촉 (궤도에 딱 맞춰 찌그러짐 없이 선명한 화살표) -->
+            <path d="M 62 25 L 76 24.5 L 75 39" fill="none" stroke="#6bd2ff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+            
+            <!-- 2. 정중앙(50, 50) 드론 구조체 -->
+            <g stroke="#3aa8db" stroke-width="3.8" stroke-linecap="round">
                 <!-- X자 암 프레임 -->
                 <line x1="33" y1="33" x2="67" y2="67"/>
                 <line x1="67" y1="33" x2="33" y2="67"/>
                 
-                <!-- 중앙 카메라 렌즈 -->
-                <circle cx="50" cy="50" r="11" fill="white" stroke-width="3"/>
-                <circle cx="50" cy="50" r="4" fill="#3aa8db"/>
+                <!-- 중앙 카메라 바디 -->
+                <circle cx="50" cy="50" r="10.5" fill="#ffffff" stroke-width="3"/>
+                <circle cx="50" cy="50" r="4" fill="#3aa8db" stroke="none"/>
                 
                 <!-- 4개 모터 및 프로펠러 -->
-                <circle cx="29" cy="29" r="2.5" fill="white" stroke-width="2"/>
-                <line x1="21" y1="29" x2="37" y2="29" stroke-width="2.8"/>
+                <circle cx="29" cy="29" r="2.5" fill="#ffffff" stroke-width="1.8"/>
+                <line x1="21" y1="29" x2="37" y2="29" stroke-width="2.5"/>
 
-                <circle cx="71" cy="29" r="2.5" fill="white" stroke-width="2"/>
-                <line x1="63" y1="29" x2="79" y2="29" stroke-width="2.8"/>
+                <circle cx="71" cy="29" r="2.5" fill="#ffffff" stroke-width="1.8"/>
+                <line x1="63" y1="29" x2="79" y2="29" stroke-width="2.5"/>
 
-                <circle cx="29" cy="71" r="2.5" fill="white" stroke-width="2"/>
-                <line x1="21" y1="71" x2="37" y2="71" stroke-width="2.8"/>
+                <circle cx="29" cy="71" r="2.5" fill="#ffffff" stroke-width="1.8"/>
+                <line x1="21" y1="71" x2="37" y2="71" stroke-width="2.5"/>
 
-                <circle cx="71" cy="71" r="2.5" fill="white" stroke-width="2"/>
-                <line x1="63" y1="71" x2="79" y2="71" stroke-width="2.8"/>
+                <circle cx="71" cy="71" r="2.5" fill="#ffffff" stroke-width="1.8"/>
+                <line x1="63" y1="71" x2="79" y2="71" stroke-width="2.5"/>
             </g>
         </symbol>
     </svg>
