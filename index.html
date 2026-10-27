@@ -50,22 +50,12 @@
             text-decoration: none;
         }
 
-        .logo-icon-box {
+        /* 헤더 로고 크기 고정 */
+        .logo-img {
             width: 42px;
             height: 42px;
-            flex-shrink: 0;
-            background-color: #ffffff;
+            object-fit: contain;
             border-radius: 10px;
-            padding: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .logo-icon-box svg {
-            width: 100%;
-            height: 100%;
-            display: block;
         }
 
         nav a {
@@ -89,24 +79,14 @@
             align-items: center;
         }
 
-        .hero-icon-box {
+        /* 메인 중앙 로고 크기 및 그림자 */
+        .hero-img {
             width: 140px;
             height: 140px;
+            object-fit: contain;
             margin-bottom: 1.5rem;
-            flex-shrink: 0;
-            background-color: #ffffff;
-            border-radius: 32px;
-            padding: 12px;
+            border-radius: 30px;
             box-shadow: 0 10px 30px rgba(140, 224, 255, 0.25);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-icon-box svg {
-            width: 100%;
-            height: 100%;
-            display: block;
         }
 
         .hero h1 {
@@ -123,6 +103,7 @@
             margin-bottom: 1.2rem;
         }
 
+        /* 회사 모토 (슬로건) 구역 */
         .hero .motto {
             font-size: 1rem;
             color: var(--text-sub);
@@ -185,6 +166,7 @@
             min-height: 2.8em;
         }
 
+        /* 서비스 가격 표시 태그 */
         .card-price {
             font-size: 1.15rem;
             font-weight: 700;
@@ -226,54 +208,10 @@
 </head>
 <body>
 
-    <!-- 완벽하게 결합된 표준 재활용 3방향 화살표 + 드론 SVG 심볼 -->
-    <svg style="display: none;">
-        <symbol id="drone-recycle-icon" viewBox="0 0 200 200">
-            <!-- 둥근 테두리 상자 -->
-            <rect x="6" y="6" width="188" height="188" rx="44" fill="none" stroke="#48cae4" stroke-width="6"/>
-            
-            <!-- 표준 재활용 삼각형 화살표 루프 -->
-            <g fill="none" stroke="#48cae4" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
-                <!-- 상단 화살표 -->
-                <path d="M 60 45 L 140 45 C 155 45 165 55 165 70 L 140 115"/>
-                <path d="M 125 100 L 140 115 L 155 100"/>
-
-                <!-- 우하단 화살표 -->
-                <path d="M 140 155 L 60 155 C 45 155 35 145 35 130 L 60 85"/>
-                <path d="M 75 100 L 60 85 L 45 100"/>
-
-                <!-- 좌측 연결 순환 곡선 -->
-                <path d="M 35 125 C 35 70 60 45 75 45"/>
-            </g>
-
-            <!-- 중앙 드론 프레임 & 프로펠러 -->
-            <g>
-                <line x1="82" y1="82" x2="118" y2="118" stroke="#00b4d8" stroke-width="7" stroke-linecap="round"/>
-                <line x1="118" y1="82" x2="82" y2="118" stroke="#00b4d8" stroke-width="7" stroke-linecap="round"/>
-                
-                <circle cx="100" cy="100" r="14" fill="#ffffff" stroke="#00b4d8" stroke-width="5"/>
-                <circle cx="100" cy="100" r="5" fill="#00b4d8"/>
-                
-                <circle cx="80" cy="80" r="4" fill="#ffffff" stroke="#00b4d8" stroke-width="3"/>
-                <line x1="68" y1="80" x2="92" y2="80" stroke="#00b4d8" stroke-width="4" stroke-linecap="round"/>
-
-                <circle cx="120" cy="80" r="4" fill="#ffffff" stroke="#00b4d8" stroke-width="3"/>
-                <line x1="108" y1="80" x2="132" y2="80" stroke="#00b4d8" stroke-width="4" stroke-linecap="round"/>
-
-                <circle cx="80" cy="120" r="4" fill="#ffffff" stroke="#00b4d8" stroke-width="3"/>
-                <line x1="68" y1="120" x2="92" y2="120" stroke="#00b4d8" stroke-width="4" stroke-linecap="round"/>
-
-                <circle cx="120" cy="120" r="4" fill="#ffffff" stroke="#00b4d8" stroke-width="3"/>
-                <line x1="108" y1="120" x2="132" y2="120" stroke="#00b4d8" stroke-width="4" stroke-linecap="round"/>
-            </g>
-        </symbol>
-    </svg>
-
     <header>
         <a href="#" class="logo">
-            <div class="logo-icon-box">
-                <svg viewBox="0 0 200 200"><use href="#drone-recycle-icon"/></svg>
-            </div>
+            <!-- 고화질 내장 재활용 드론 로고 -->
+            <img class="logo-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect width='200' height='200' rx='44' fill='white'/><g fill='none' stroke='%236bd2ff' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'><path d='M 100 35 L 145 35 L 170 80 L 150 115'/><path d='M 132 100 L 150 115 L 168 100'/><path d='M 150 155 L 60 155 L 35 110 L 55 75'/><path d='M 40 92 L 55 75 L 70 92'/><path d='M 35 65 L 70 35 L 90 35'/><path d='M 75 20 L 90 35 L 75 50'/></g><g stroke='%2348cae4' stroke-width='7' stroke-linecap='round'><line x1='80' y1='80' x2='120' y2='120'/><line x1='120' y1='80' x2='80' y2='120'/><circle cx='100' cy='100' r='14' fill='white' stroke-width='5'/><circle cx='100' cy='100' r='5' fill='%2348cae4'/><circle cx='78' cy='78' r='4' fill='white' stroke-width='3'/><line x1='66' y1='78' x2='90' y2='78'/><circle cx='122' cy='78' r='4' fill='white' stroke-width='3'/><line x1='110' y1='78' x2='134' y2='78'/><circle cx='78' cy='122' r='4' fill='white' stroke-width='3'/><line x1='66' y1='122' x2='90' y2='122'/><circle cx='122' cy='122' r='4' fill='white' stroke-width='3'/><line x1='110' y1='122' x2='134' y2='122'/></g></svg>" alt="wing again 로고">
             <span>wing again</span>
         </a>
         <nav>
@@ -283,9 +221,9 @@
     </header>
 
     <section class="hero">
-        <div class="hero-icon-box">
-            <svg viewBox="0 0 200 200"><use href="#drone-recycle-icon"/></svg>
-        </div>
+        <!-- 고화질 내장 메인 재활용 드론 로고 -->
+        <img class="hero-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect width='200' height='200' rx='44' fill='white'/><g fill='none' stroke='%236bd2ff' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'><path d='M 100 35 L 145 35 L 170 80 L 150 115'/><path d='M 132 100 L 150 115 L 168 100'/><path d='M 150 155 L 60 155 L 35 110 L 55 75'/><path d='M 40 92 L 55 75 L 70 92'/><path d='M 35 65 L 70 35 L 90 35'/><path d='M 75 20 L 90 35 L 75 50'/></g><g stroke='%2348cae4' stroke-width='7' stroke-linecap='round'><line x1='80' y1='80' x2='120' y2='120'/><line x1='120' y1='80' x2='80' y2='120'/><circle cx='100' cy='100' r='14' fill='white' stroke-width='5'/><circle cx='100' cy='100' r='5' fill='%2348cae4'/><circle cx='78' cy='78' r='4' fill='white' stroke-width='3'/><line x1='66' y1='78' x2='90' y2='78'/><circle cx='122' cy='78' r='4' fill='white' stroke-width='3'/><line x1='110' y1='78' x2='134' y2='78'/><circle cx='78' cy='122' r='4' fill='white' stroke-width='3'/><line x1='66' y1='122' x2='90' y2='122'/><circle cx='122' cy='122' r='4' fill='white' stroke-width='3'/><line x1='110' y1='122' x2='134' y2='122'/></g></svg>" alt="wing again 메인 로고">
+        
         <h1>wing again</h1>
         <div class="sub-title">나 다시 날아갈래</div>
         
@@ -296,6 +234,7 @@
         </div>
     </section>
 
+    <!-- 서비스 및 가격 안내 섹션 -->
     <section class="services" id="services">
         <div class="card">
             <div>
