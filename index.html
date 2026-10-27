@@ -50,12 +50,23 @@
             text-decoration: none;
         }
 
-        /* 헤더 로고 크기 고정 */
-        .logo-img {
+        /* 찌그러짐 방지 1:1 정비율 고정 박스 */
+        .logo-icon-box {
             width: 42px;
             height: 42px;
-            object-fit: contain;
+            flex-shrink: 0;
+            background-color: #ffffff;
             border-radius: 10px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon-box svg {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
 
         nav a {
@@ -79,14 +90,25 @@
             align-items: center;
         }
 
-        /* 메인 중앙 로고 크기 및 그림자 */
-        .hero-img {
+        /* 메인 대형 로고 고정 박스 */
+        .hero-icon-box {
             width: 140px;
             height: 140px;
-            object-fit: contain;
             margin-bottom: 1.5rem;
-            border-radius: 30px;
+            flex-shrink: 0;
+            background-color: #ffffff;
+            border-radius: 32px;
+            padding: 14px;
             box-shadow: 0 10px 30px rgba(140, 224, 255, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-icon-box svg {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
 
         .hero h1 {
@@ -103,7 +125,7 @@
             margin-bottom: 1.2rem;
         }
 
-        /* 회사 모토 (슬로건) 구역 */
+        /* 회사 모토 (슬로건) */
         .hero .motto {
             font-size: 1rem;
             color: var(--text-sub);
@@ -166,7 +188,6 @@
             min-height: 2.8em;
         }
 
-        /* 서비스 가격 표시 태그 */
         .card-price {
             font-size: 1.15rem;
             font-weight: 700;
@@ -210,8 +231,29 @@
 
     <header>
         <a href="#" class="logo">
-            <!-- 고화질 내장 재활용 드론 로고 -->
-            <img class="logo-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect width='200' height='200' rx='44' fill='white'/><g fill='none' stroke='%236bd2ff' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'><path d='M 100 35 L 145 35 L 170 80 L 150 115'/><path d='M 132 100 L 150 115 L 168 100'/><path d='M 150 155 L 60 155 L 35 110 L 55 75'/><path d='M 40 92 L 55 75 L 70 92'/><path d='M 35 65 L 70 35 L 90 35'/><path d='M 75 20 L 90 35 L 75 50'/></g><g stroke='%2348cae4' stroke-width='7' stroke-linecap='round'><line x1='80' y1='80' x2='120' y2='120'/><line x1='120' y1='80' x2='80' y2='120'/><circle cx='100' cy='100' r='14' fill='white' stroke-width='5'/><circle cx='100' cy='100' r='5' fill='%2348cae4'/><circle cx='78' cy='78' r='4' fill='white' stroke-width='3'/><line x1='66' y1='78' x2='90' y2='78'/><circle cx='122' cy='78' r='4' fill='white' stroke-width='3'/><line x1='110' y1='78' x2='134' y2='78'/><circle cx='78' cy='122' r='4' fill='white' stroke-width='3'/><line x1='66' y1='122' x2='90' y2='122'/><circle cx='122' cy='122' r='4' fill='white' stroke-width='3'/><line x1='110' y1='122' x2='134' y2='122'/></g></svg>" alt="wing again 로고">
+            <div class="logo-icon-box">
+                <svg viewBox="0 0 100 100" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 50 12 L 78 12 C 85 12 90 17 90 24 L 78 50" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 68 37 L 78 50 L 91 38" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 76 72 L 32 72 C 25 72 20 67 20 60 L 32 35" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 43 48 L 32 35 L 19 47" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 24 35 C 24 20 37 12 50 12" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round"/>
+                    <g stroke="#3aa8db" stroke-width="3.5" stroke-linecap="round">
+                        <line x1="38" y1="38" x2="62" y2="62"/>
+                        <line x1="62" y1="38" x2="38" y2="62"/>
+                        <circle cx="50" cy="50" r="9" fill="white" stroke-width="3"/>
+                        <circle cx="50" cy="50" r="3.5" fill="#3aa8db"/>
+                        <circle cx="34" cy="34" r="2.5" fill="white" stroke-width="2"/>
+                        <line x1="27" y1="34" x2="41" y2="34" stroke-width="2.5"/>
+                        <circle cx="66" cy="34" r="2.5" fill="white" stroke-width="2"/>
+                        <line x1="59" y1="34" x2="73" y2="34" stroke-width="2.5"/>
+                        <circle cx="34" cy="66" r="2.5" fill="white" stroke-width="2"/>
+                        <line x1="27" y1="66" x2="41" y2="66" stroke-width="2.5"/>
+                        <circle cx="66" cy="66" r="2.5" fill="white" stroke-width="2"/>
+                        <line x1="59" y1="66" x2="73" y2="66" stroke-width="2.5"/>
+                    </g>
+                </svg>
+            </div>
             <span>wing again</span>
         </a>
         <nav>
@@ -221,9 +263,29 @@
     </header>
 
     <section class="hero">
-        <!-- 고화질 내장 메인 재활용 드론 로고 -->
-        <img class="hero-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect width='200' height='200' rx='44' fill='white'/><g fill='none' stroke='%236bd2ff' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'><path d='M 100 35 L 145 35 L 170 80 L 150 115'/><path d='M 132 100 L 150 115 L 168 100'/><path d='M 150 155 L 60 155 L 35 110 L 55 75'/><path d='M 40 92 L 55 75 L 70 92'/><path d='M 35 65 L 70 35 L 90 35'/><path d='M 75 20 L 90 35 L 75 50'/></g><g stroke='%2348cae4' stroke-width='7' stroke-linecap='round'><line x1='80' y1='80' x2='120' y2='120'/><line x1='120' y1='80' x2='80' y2='120'/><circle cx='100' cy='100' r='14' fill='white' stroke-width='5'/><circle cx='100' cy='100' r='5' fill='%2348cae4'/><circle cx='78' cy='78' r='4' fill='white' stroke-width='3'/><line x1='66' y1='78' x2='90' y2='78'/><circle cx='122' cy='78' r='4' fill='white' stroke-width='3'/><line x1='110' y1='78' x2='134' y2='78'/><circle cx='78' cy='122' r='4' fill='white' stroke-width='3'/><line x1='66' y1='122' x2='90' y2='122'/><circle cx='122' cy='122' r='4' fill='white' stroke-width='3'/><line x1='110' y1='122' x2='134' y2='122'/></g></svg>" alt="wing again 메인 로고">
-        
+        <div class="hero-icon-box">
+            <svg viewBox="0 0 100 100" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 50 12 L 78 12 C 85 12 90 17 90 24 L 78 50" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M 68 37 L 78 50 L 91 38" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M 76 72 L 32 72 C 25 72 20 67 20 60 L 32 35" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M 43 48 L 32 35 L 19 47" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M 24 35 C 24 20 37 12 50 12" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round"/>
+                <g stroke="#3aa8db" stroke-width="3.5" stroke-linecap="round">
+                    <line x1="38" y1="38" x2="62" y2="62"/>
+                    <line x1="62" y1="38" x2="38" y2="62"/>
+                    <circle cx="50" cy="50" r="9" fill="white" stroke-width="3"/>
+                    <circle cx="50" cy="50" r="3.5" fill="#3aa8db"/>
+                    <circle cx="34" cy="34" r="2.5" fill="white" stroke-width="2"/>
+                    <line x1="27" y1="34" x2="41" y2="34" stroke-width="2.5"/>
+                    <circle cx="66" cy="34" r="2.5" fill="white" stroke-width="2"/>
+                    <line x1="59" y1="34" x2="73" y2="34" stroke-width="2.5"/>
+                    <circle cx="34" cy="66" r="2.5" fill="white" stroke-width="2"/>
+                    <line x1="27" y1="66" x2="41" y2="66" stroke-width="2.5"/>
+                    <circle cx="66" cy="66" r="2.5" fill="white" stroke-width="2"/>
+                    <line x1="59" y1="66" x2="73" y2="66" stroke-width="2.5"/>
+                </g>
+            </svg>
+        </div>
         <h1>wing again</h1>
         <div class="sub-title">나 다시 날아갈래</div>
         
