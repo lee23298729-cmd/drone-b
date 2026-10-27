@@ -7,12 +7,12 @@
     <style>
         :root {
             --bg-color: #ffffff;            /* 전체 흰색 배경 */
-            --card-bg: #f4faff;            /* 살짝 하늘빛이 도는 밝은 카드 배경 */
-            --brand-color: #3aa8db;          /* 회사 이름 메인 하늘색 */
-            --text-light-sky: #62bbf0;       /* 회사 이름보다 한 단계 연한 하늘색 글씨 */
-            --text-sub-sky: #7cd0ff;         /* 부제목 및 모토용 밝고 연한 하늘색 */
-            --price-color: #2b93d1;         /* 강조용 하늘색 */
-            --border-color: #e1f3ff;        /* 연한 파란빛 테두리 */
+            --card-bg: #f8fcff;            /* 밝은 파스텔 하늘빛 카드 */
+            --brand-color: #3aa8db;          /* 메인 하늘색 */
+            --text-light-sky: #4faae1;       /* 본문용 연한 하늘색 */
+            --text-sub-sky: #6cc1f2;         /* 서브텍스트용 밝은 하늘색 */
+            --price-color: #2b93d1;         /* 포인트 강하게 주는 하늘색 */
+            --border-color: #e2f2fd;        /* 은은한 파란빛 테두리 */
         }
 
         * {
@@ -32,7 +32,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 2rem;
+            padding: 1.2rem 2rem;
             background-color: #ffffff;
             border-bottom: 1px solid var(--border-color);
             position: sticky;
@@ -46,7 +46,7 @@
             gap: 12px;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--brand-color); /* 회사 이름 메인 색상 */
+            color: var(--brand-color);
             text-decoration: none;
         }
 
@@ -57,7 +57,7 @@
             background-color: #ffffff;
             border: 1px solid var(--border-color);
             border-radius: 10px;
-            padding: 0px;
+            padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -73,18 +73,19 @@
         }
 
         nav a {
-            color: var(--text-light-sky); /* 연한 하늘색 글씨 */
+            color: var(--text-light-sky);
             text-decoration: none;
             margin-left: 1.5rem;
             transition: color 0.3s;
             font-size: 0.95rem;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         nav a:hover {
             color: var(--brand-color);
         }
 
+        /* Hero 섹션 */
         .hero {
             text-align: center;
             padding: 4.5rem 1rem 3.5rem;
@@ -95,14 +96,14 @@
         }
 
         .hero-icon-box {
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
             margin-bottom: 1.5rem;
             flex-shrink: 0;
             background-color: #ffffff;
             border: 1px solid var(--border-color);
-            border-radius: 32px;
-            padding: 0px;
+            border-radius: 36px;
+            padding: 0;
             box-shadow: 0 10px 25px rgba(58, 168, 219, 0.12);
             display: flex;
             align-items: center;
@@ -118,23 +119,20 @@
             display: block;
         }
 
-        /* 회사 이름 */
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             color: var(--brand-color);
             margin-bottom: 0.3rem;
             letter-spacing: -1px;
         }
 
-        /* 부제목 글씨 (회사 이름보다 연한 하늘색) */
         .hero .sub-title {
             font-size: 1.4rem;
             color: var(--text-light-sky);
             font-weight: 600;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
         }
 
-        /* 회사 모토 (슬로건) */
         .hero .motto {
             font-size: 1rem;
             color: var(--text-light-sky);
@@ -151,10 +149,61 @@
             color: var(--brand-color);
         }
 
-        .services {
+        /* 공통 섹션 스타일 */
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            color: var(--brand-color);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .section-desc {
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--text-sub-sky);
+            margin-bottom: 2.5rem;
+        }
+
+        /* 1. 신뢰 지표 수치 섹션 */
+        .stats-container {
+            max-width: 1000px;
+            margin: 0 auto 4rem;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.8rem 1rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--brand-color);
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light-sky);
+            font-weight: 600;
+        }
+
+        /* 2. 핵심 서비스 4종 카드 */
+        .services-section {
             max-width: 1100px;
-            margin: 0 auto;
-            padding: 3rem 1rem 4rem;
+            margin: 0 auto 5rem;
+            padding: 0 1rem;
+        }
+
+        .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1.8rem;
@@ -162,7 +211,7 @@
 
         .card {
             background-color: var(--card-bg);
-            border-radius: 14px;
+            border-radius: 16px;
             padding: 2rem 1.5rem;
             text-align: center;
             border: 1px solid var(--border-color);
@@ -184,14 +233,12 @@
             display: block;
         }
 
-        /* 카드 제목 (연한 하늘색) */
         .card h2 {
             font-size: 1.4rem;
             color: var(--text-light-sky);
             margin-bottom: 0.5rem;
         }
 
-        /* 카드 설명 (연한 하늘색) */
         .card p {
             font-size: 0.92rem;
             color: var(--text-sub-sky);
@@ -229,6 +276,78 @@
             background-color: var(--price-color);
         }
 
+        /* 3. 이용 프로세스 4단계 */
+        .process-section {
+            max-width: 1000px;
+            margin: 0 auto 5rem;
+            padding: 0 1rem;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .process-step {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-num {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            background-color: var(--brand-color);
+            color: #ffffff;
+            font-weight: 800;
+            border-radius: 50%;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .process-step h3 {
+            font-size: 1.1rem;
+            color: var(--brand-color);
+            margin-bottom: 0.4rem;
+        }
+
+        .process-step p {
+            font-size: 0.88rem;
+            color: var(--text-sub-sky);
+        }
+
+        /* 4. 자주 묻는 질문 (FAQ) */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 5rem;
+            padding: 0 1rem;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item h4 {
+            font-size: 1.05rem;
+            color: var(--brand-color);
+            margin-bottom: 0.4rem;
+        }
+
+        .faq-item p {
+            font-size: 0.9rem;
+            color: var(--text-light-sky);
+        }
+
         footer {
             text-align: center;
             padding: 2.5rem;
@@ -249,7 +368,9 @@
             <span>wing again</span>
         </a>
         <nav>
-            <a href="#services">서비스</a>
+            <a href="#services">서비스 안내</a>
+            <a href="#process">이용절차</a>
+            <a href="#faq">FAQ</a>
             <a href="#contact">문의하기</a>
         </nav>
     </header>
@@ -267,53 +388,127 @@
         </div>
     </section>
 
-    <section class="services" id="services">
-        <div class="card">
-            <div>
-                <span class="card-emoji">🛍️</span>
-                <h2>사줘드론</h2>
-                <p>신상 및 인기 최신 드론 맞춤 구매 추천 가이드</p>
+    <!-- 1. 주요 실적 수치 지표 -->
+    <section class="stats-container">
+        <div class="stat-card">
+            <div class="stat-number">1,280+</div>
+            <div class="stat-label">누적 수거 및 재활용</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">98.5%</div>
+            <div class="stat-label">부품 정상 재생률</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">0원</div>
+            <div class="stat-label">수리 무상 점검진단비</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">24시간</div>
+            <div class="stat-label">중고 매입 당일 정산</div>
+        </div>
+    </section>
+
+    <!-- 2. 핵심 서비스 4종 -->
+    <section class="services-section" id="services">
+        <h2 class="section-title">맞춤형 드론 서비스</h2>
+        <p class="section-desc">드론에 관한 모든 솔루션을 합리적으로 제공합니다.</p>
+
+        <div class="services">
+            <div class="card">
+                <div>
+                    <span class="card-emoji">🛍️</span>
+                    <h2>사줘드론</h2>
+                    <p>신상 및 인기 최신 드론 맞춤 구매 추천 가이드</p>
+                </div>
+                <div>
+                    <div class="card-price">최저가 견적 맞춤</div>
+                    <button class="btn" onclick="alert('사줘드론 서비스 문의 페이지 준비 중입니다!')">구매 문의</button>
+                </div>
             </div>
-            <div>
-                <div class="card-price">최저가 견적 맞춤</div>
-                <button class="btn" onclick="alert('사줘드론 서비스 문의 페이지 준비 중입니다!')">구매 문의</button>
+
+            <div class="card">
+                <div>
+                    <span class="card-emoji">🛠️</span>
+                    <h2>고쳐드론</h2>
+                    <p>고장 나거나 파손된 드론 정밀 점검 및 수리</p>
+                </div>
+                <div>
+                    <div class="card-price">진단비 무료 / 최저가 수리</div>
+                    <button class="btn" onclick="alert('고쳐드론 서비스 문의 페이지 준비 중입니다!')">수리 접수</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="card-emoji">🤝</span>
+                    <h2>빌려드론</h2>
+                    <p>필요한 날짜만큼 부담 없이 단기 / 장기 대여</p>
+                </div>
+                <div>
+                    <div class="card-price">일 15,000원 ~</div>
+                    <button class="btn" onclick="alert('빌려드론 서비스 문의 페이지 준비 중입니다!')">대여 신청</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="card-emoji">🏷️</span>
+                    <h2>팔아드론</h2>
+                    <p>더 이상 안 쓰는 중고 드론 즉시 최고가 매입</p>
+                </div>
+                <div>
+                    <div class="card-price">당일 정산 / 최고가 매입</div>
+                    <button class="btn" onclick="alert('팔아드론 서비스 문의 페이지 준비 중입니다!')">매입 신청</button>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="card">
-            <div>
-                <span class="card-emoji">🛠️</span>
-                <h2>고쳐드론</h2>
-                <p>고장 나거나 파손된 드론 정밀 점검 및 수리</p>
+    <!-- 3. 이용 프로세스 안내 -->
+    <section class="process-section" id="process">
+        <h2 class="section-title">간편한 이용 절차</h2>
+        <p class="section-desc">누구나 쉽고 빠르게 이용하실 수 있습니다.</p>
+
+        <div class="process-grid">
+            <div class="process-step">
+                <span class="step-num">1</span>
+                <h3>서비스 신청</h3>
+                <p>원하시는 서비스(수리/매입/대여)를 온라인으로 신청합니다.</p>
             </div>
-            <div>
-                <div class="card-price">진단비 무료 / 수리비 최저가</div>
-                <button class="btn" onclick="alert('고쳐드론 서비스 문의 페이지 준비 중입니다!')">수리 접수</button>
+            <div class="process-step">
+                <span class="step-num">2</span>
+                <h3>무상 수거 및 점검</h3>
+                <p>전문 엔지니어가 제품을 전달받아 정밀 진단합니다.</p>
+            </div>
+            <div class="process-step">
+                <span class="step-num">3</span>
+                <h3>견적 및 진행</h3>
+                <p>투명한 정찰제 견적을 안내해 드린 후 진행됩니다.</p>
+            </div>
+            <div class="process-step">
+                <span class="step-num">4</span>
+                <h3>완료 및 정산</h3>
+                <p>수리 완료품 전달 또는 매입금 당일 입금이 완료됩니다.</p>
             </div>
         </div>
+    </section>
 
-        <div class="card">
-            <div>
-                <span class="card-emoji">🤝</span>
-                <h2>빌려드론</h2>
-                <p>필요한 날짜만큼 부담 없이 단기 / 장기 대여</p>
-            </div>
-            <div>
-                <div class="card-price">일 15,000원 ~</div>
-                <button class="btn" onclick="alert('빌려드론 서비스 문의 페이지 준비 중입니다!')">대여 신청</button>
-            </div>
+    <!-- 4. 자주 묻는 질문 (FAQ) -->
+    <section class="faq-section" id="faq">
+        <h2 class="section-title">자주 묻는 질문</h2>
+        <p class="section-desc">궁금하신 점을 확인해 보세요.</p>
+
+        <div class="faq-item">
+            <h4>Q. 고장 난 드론도 매입(팔아드론)이 가능한가요?</h4>
+            <p>네, 작동하지 않거나 일부 부품이 파손된 드론도 정밀 점검 후 부품 재활용 가치를 측정하여 매입해 드립니다.</p>
         </div>
-
-        <div class="card">
-            <div>
-                <span class="card-emoji">🏷️</span>
-                <h2>팔아드론</h2>
-                <p>더 이상 안 쓰는 중고 드론 즉시 최고가 매입</p>
-            </div>
-            <div>
-                <div class="card-price">당일 정산 / 최고가 매입</div>
-                <button class="btn" onclick="alert('팔아드론 서비스 문의 페이지 준비 중입니다!')">매입 신청</button>
-            </div>
+        <div class="faq-item">
+            <h4>Q. 수리(고쳐드론) 진단비는 정말 무료인가요?</h4>
+            <p>네, 점검 후 수리를 진행하지 않으시더라도 기본 진단비는 완전 무료입니다.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q. 대여(빌려드론) 시 배송도 되나요?</h4>
+            <p>택배 수령 및 반납이 모두 가능하며, 안전 포장 박스를 함께 제공해 드립니다.</p>
         </div>
     </section>
 
