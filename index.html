@@ -229,23 +229,25 @@
 </head>
 <body>
 
-    <!-- 중앙 대칭 + 또렷한 화살표 촉 정밀 SVG 심볼 -->
+    <!-- 직관적인 2방향 재활용 순환 화살표 + 정중앙 드론 정밀 SVG 심볼 -->
     <svg style="display: none;">
         <symbol id="drone-recycle-icon" viewBox="0 0 100 100">
-            <!-- 1. 정중앙(50,50) 기점 대칭 원형 순환 화살표 (반지름 r=36) -->
-            <!-- 원형 호 (약 300도 회전 순환) -->
-            <path d="M 75.46 24.54 A 36 36 0 1 0 82.5 68" fill="none" stroke="#6bd2ff" stroke-width="5.5" stroke-linecap="round"/>
+            <!-- 1. 위/아래 대칭 2방향 재활용 순환 화살표 (r=38) -->
+            <!-- 상단 반원 화살표 (시계 방향) -->
+            <path d="M 12 50 A 38 38 0 0 1 88 50" fill="none" stroke="#6bd2ff" stroke-width="5.5" stroke-linecap="round"/>
+            <path d="M 76 38 L 88 50 L 76 62" fill="none" stroke="#6bd2ff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
             
-            <!-- 화살표 촉 (궤도에 딱 맞춰 찌그러짐 없이 선명한 화살표) -->
-            <path d="M 62 25 L 76 24.5 L 75 39" fill="none" stroke="#6bd2ff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
-            
+            <!-- 하단 반원 화살표 (시계 방향) -->
+            <path d="M 88 50 A 38 38 0 0 1 12 50" fill="none" stroke="#6bd2ff" stroke-width="5.5" stroke-linecap="round"/>
+            <path d="M 24 62 L 12 50 L 24 38" fill="none" stroke="#6bd2ff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+
             <!-- 2. 정중앙(50, 50) 드론 구조체 -->
             <g stroke="#3aa8db" stroke-width="3.8" stroke-linecap="round">
                 <!-- X자 암 프레임 -->
                 <line x1="33" y1="33" x2="67" y2="67"/>
                 <line x1="67" y1="33" x2="33" y2="67"/>
                 
-                <!-- 중앙 카메라 바디 -->
+                <!-- 중앙 카메라 렌즈 -->
                 <circle cx="50" cy="50" r="10.5" fill="#ffffff" stroke-width="3"/>
                 <circle cx="50" cy="50" r="4" fill="#3aa8db" stroke="none"/>
                 
