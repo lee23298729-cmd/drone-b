@@ -6,13 +6,13 @@
     <title>wing again - 나 다시 날아갈래</title>
     <style>
         :root {
-            --bg-color: #0b132b;
-            --card-bg: #1c2541;
-            --accent-color: #8ce0ff;
-            --accent-hover: #b8efff;
-            --text-color: #ffffff;
-            --text-sub: #a0aec0;
-            --price-color: #ffd166;
+            --bg-color: #ffffff;            /* 전체 흰색 배경 */
+            --card-bg: #f4faff;            /* 살짝 하늘빛이 도는 밝은 카드 배경 */
+            --brand-color: #3aa8db;          /* 회사 이름 메인 하늘색 */
+            --text-light-sky: #62bbf0;       /* 회사 이름보다 한 단계 연한 하늘색 글씨 */
+            --text-sub-sky: #7cd0ff;         /* 부제목 및 모토용 밝고 연한 하늘색 */
+            --price-color: #2b93d1;         /* 강조용 하늘색 */
+            --border-color: #e1f3ff;        /* 연한 파란빛 테두리 */
         }
 
         * {
@@ -24,7 +24,7 @@
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: var(--text-light-sky);
             line-height: 1.6;
         }
 
@@ -33,8 +33,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.5rem 2rem;
-            background-color: rgba(11, 19, 43, 0.9);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -46,16 +46,16 @@
             gap: 12px;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--accent-color);
+            color: var(--brand-color); /* 회사 이름 메인 색상 */
             text-decoration: none;
         }
 
-        /* 헤더 상단 1:1 고정 이미지 컨테이너 */
         .logo-icon-box {
             width: 42px;
             height: 42px;
             flex-shrink: 0;
             background-color: #ffffff;
+            border: 1px solid var(--border-color);
             border-radius: 10px;
             padding: 0px;
             display: flex;
@@ -64,7 +64,6 @@
             overflow: hidden;
         }
 
-        /* 찌그러짐 방지 이미지 스타일 */
         .logo-icon-box img {
             width: 100%;
             height: 100%;
@@ -74,43 +73,43 @@
         }
 
         nav a {
-            color: var(--text-sub);
+            color: var(--text-light-sky); /* 연한 하늘색 글씨 */
             text-decoration: none;
             margin-left: 1.5rem;
             transition: color 0.3s;
             font-size: 0.95rem;
+            font-weight: 500;
         }
 
         nav a:hover {
-            color: var(--accent-color);
+            color: var(--brand-color);
         }
 
         .hero {
             text-align: center;
             padding: 4.5rem 1rem 3.5rem;
-            background: radial-gradient(circle at center, #1c2541 0%, #0b132b 100%);
+            background-color: #ffffff;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* 히어로 섹션 메인 대형 1:1 고정 이미지 컨테이너 */
         .hero-icon-box {
             width: 140px;
             height: 140px;
             margin-bottom: 1.5rem;
             flex-shrink: 0;
             background-color: #ffffff;
+            border: 1px solid var(--border-color);
             border-radius: 32px;
             padding: 0px;
-            box-shadow: 0 10px 30px rgba(140, 224, 255, 0.25);
+            box-shadow: 0 10px 25px rgba(58, 168, 219, 0.12);
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
         }
 
-        /* 찌그러짐 방지 이미지 스타일 */
         .hero-icon-box img {
             width: 100%;
             height: 100%;
@@ -119,16 +118,18 @@
             display: block;
         }
 
+        /* 회사 이름 */
         .hero h1 {
             font-size: 3rem;
-            color: var(--accent-color);
+            color: var(--brand-color);
             margin-bottom: 0.3rem;
             letter-spacing: -1px;
         }
 
+        /* 부제목 글씨 (회사 이름보다 연한 하늘색) */
         .hero .sub-title {
             font-size: 1.4rem;
-            color: #ffffff;
+            color: var(--text-light-sky);
             font-weight: 600;
             margin-bottom: 1.2rem;
         }
@@ -136,18 +137,18 @@
         /* 회사 모토 (슬로건) */
         .hero .motto {
             font-size: 1rem;
-            color: var(--text-sub);
+            color: var(--text-light-sky);
             max-width: 620px;
             line-height: 1.7;
             word-break: keep-all;
-            background-color: rgba(28, 37, 65, 0.6);
+            background-color: var(--card-bg);
             padding: 1.2rem 2rem;
             border-radius: 14px;
-            border: 1px solid rgba(140, 224, 255, 0.2);
+            border: 1px solid var(--border-color);
         }
 
         .hero .motto strong {
-            color: var(--accent-color);
+            color: var(--brand-color);
         }
 
         .services {
@@ -164,7 +165,7 @@
             border-radius: 14px;
             padding: 2rem 1.5rem;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
             transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
@@ -173,8 +174,8 @@
 
         .card:hover {
             transform: translateY(-6px);
-            border-color: var(--accent-color);
-            box-shadow: 0 12px 24px rgba(140, 224, 255, 0.15);
+            border-color: var(--brand-color);
+            box-shadow: 0 12px 24px rgba(58, 168, 219, 0.15);
         }
 
         .card-emoji {
@@ -183,15 +184,17 @@
             display: block;
         }
 
+        /* 카드 제목 (연한 하늘색) */
         .card h2 {
             font-size: 1.4rem;
-            color: var(--text-color);
+            color: var(--text-light-sky);
             margin-bottom: 0.5rem;
         }
 
+        /* 카드 설명 (연한 하늘색) */
         .card p {
             font-size: 0.92rem;
-            color: var(--text-sub);
+            color: var(--text-sub-sky);
             margin-bottom: 1.2rem;
             min-height: 2.8em;
         }
@@ -200,19 +203,19 @@
             font-size: 1.15rem;
             font-weight: 700;
             color: var(--price-color);
-            background-color: rgba(255, 209, 102, 0.1);
+            background-color: rgba(58, 168, 219, 0.08);
             padding: 0.5rem 0.8rem;
             border-radius: 8px;
             margin-bottom: 1.2rem;
-            border: 1px dashed rgba(255, 209, 102, 0.3);
+            border: 1px dashed rgba(58, 168, 219, 0.3);
         }
 
         .btn {
             display: inline-block;
             width: 100%;
             padding: 0.8rem 1rem;
-            background-color: var(--accent-color);
-            color: #0b132b;
+            background-color: var(--brand-color);
+            color: #ffffff;
             font-weight: 700;
             border-radius: 8px;
             text-decoration: none;
@@ -223,15 +226,16 @@
         }
 
         .btn:hover {
-            background-color: var(--accent-hover);
+            background-color: var(--price-color);
         }
 
         footer {
             text-align: center;
             padding: 2.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-sub);
+            border-top: 1px solid var(--border-color);
+            color: var(--text-sub-sky);
             font-size: 0.9rem;
+            background-color: #ffffff;
         }
     </style>
 </head>
@@ -240,7 +244,6 @@
     <header>
         <a href="#" class="logo">
             <div class="logo-icon-box">
-                <!-- 올리신 drone_recycle_icon.png 파일 자동 연동 -->
                 <img src="drone_recycle_icon.png" alt="wing again 로고">
             </div>
             <span>wing again</span>
@@ -253,20 +256,17 @@
 
     <section class="hero">
         <div class="hero-icon-box">
-            <!-- 올리신 drone_recycle_icon.png 파일 자동 연동 -->
             <img src="drone_recycle_icon.png" alt="wing again 메인 로고">
         </div>
         <h1>wing again</h1>
         <div class="sub-title">나 다시 날아갈래</div>
         
-        <!-- 회사 모토 (슬로건) -->
         <div class="motto">
             "버려지거나 방치된 드론에 <strong>새로운 날개</strong>를 달아드립니다.<br>
             자원 순환과 기술 재활용으로 지속 가능한 비행을 이어가는 <strong>드론 전문 재활용 플랫폼</strong>입니다."
         </div>
     </section>
 
-    <!-- 서비스 및 가격 안내 섹션 -->
     <section class="services" id="services">
         <div class="card">
             <div>
