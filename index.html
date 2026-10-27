@@ -50,11 +50,12 @@
             text-decoration: none;
         }
 
-        /* 헤더 아이콘 고정 크기 및 정비율 설정 */
+        /* 찌그러짐 원천 방지를 위한 1:1 정비율 박스 */
         .logo-icon-box {
             width: 40px;
             height: 40px;
             flex-shrink: 0;
+            aspect-ratio: 1 / 1;
         }
 
         .logo-icon-box svg {
@@ -84,12 +85,12 @@
             align-items: center;
         }
 
-        /* 히어로 중앙 메인 아이콘 고정 크기 */
         .hero-icon-box {
             width: 130px;
             height: 130px;
             margin-bottom: 1.5rem;
             flex-shrink: 0;
+            aspect-ratio: 1 / 1;
         }
 
         .hero-icon-box svg {
@@ -135,180 +136,4 @@
         .card:hover {
             transform: translateY(-6px);
             border-color: var(--accent-color);
-            box-shadow: 0 12px 24px rgba(140, 224, 255, 0.15);
-        }
-
-        .card-emoji {
-            font-size: 3rem;
-            margin-bottom: 0.8rem;
-            display: block;
-        }
-
-        .card h2 {
-            font-size: 1.4rem;
-            color: var(--text-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .card p {
-            font-size: 0.92rem;
-            color: var(--text-sub);
-            margin-bottom: 1.2rem;
-            min-height: 2.8em;
-        }
-
-        /* 복원된 가격 표시 태그 스타일 */
-        .card-price {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--price-color);
-            background-color: rgba(255, 209, 102, 0.1);
-            padding: 0.5rem 0.8rem;
-            border-radius: 8px;
-            margin-bottom: 1.2rem;
-            border: 1px dashed rgba(255, 209, 102, 0.3);
-        }
-
-        .btn {
-            display: inline-block;
-            width: 100%;
-            padding: 0.8rem 1rem;
-            background-color: var(--accent-color);
-            color: #0b132b;
-            font-weight: 700;
-            border-radius: 8px;
-            text-decoration: none;
-            cursor: pointer;
-            border: none;
-            transition: background-color 0.3s;
-            font-size: 0.95rem;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-hover);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-sub);
-            font-size: 0.9rem;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- 정밀 보정된 재활용 + 드론 1:1 완벽 정비율 SVG 심볼 -->
-    <svg style="display: none;">
-        <symbol id="drone-recycle-icon" viewBox="0 0 100 100">
-            <!-- 외곽 둥근 모서리 사각형 -->
-            <rect x="4" y="4" width="92" height="92" rx="22" fill="none" stroke="#8ce0ff" stroke-width="4.5"/>
-            
-            <!-- 재활용 화살표 순환 루프 -->
-            <!-- 상단 화살표 -->
-            <path d="M 42 16 L 62 16 C 68 16 74 19 78 25 L 82 31" fill="none" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round"/>
-            <path d="M 75 22 L 83 31 L 87 21" fill="none" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-            
-            <!-- 하단 우측 화살표 -->
-            <path d="M 80 58 L 74 70 C 70 77 62 82 52 82 L 40 82 C 32 82 25 77 21 70 L 18 64" fill="none" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round"/>
-            <path d="M 26 71 L 17 63 L 13 73" fill="none" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-            
-            <!-- 좌측 화살표 -->
-            <path d="M 18 42 L 22 30 C 26 22 33 16 43 16" fill="none" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round"/>
-            <path d="M 24 28 L 43 16 L 33 28" fill="none" stroke="#8ce0ff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-            <!-- 드론 구조체 (중앙 정렬) -->
-            <g transform="translate(0, 0)">
-                <!-- 모터 연결 X 암(Arm) -->
-                <line x1="33" y1="33" x2="67" y2="67" stroke="#8ce0ff" stroke-width="4" stroke-linecap="round"/>
-                <line x1="67" y1="33" x2="33" y2="67" stroke="#8ce0ff" stroke-width="4" stroke-linecap="round"/>
-                
-                <!-- 중앙 카메라 바디 -->
-                <circle cx="50" cy="50" r="10" fill="#0b132b" stroke="#8ce0ff" stroke-width="3.5"/>
-                <circle cx="50" cy="50" r="3.5" fill="#8ce0ff"/>
-                
-                <!-- 4개 모터 및 프로펠러 -->
-                <!-- 좌상단 -->
-                <circle cx="32" cy="32" r="3" fill="#0b132b" stroke="#8ce0ff" stroke-width="2"/>
-                <line x1="22" y1="32" x2="42" y2="32" stroke="#8ce0ff" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- 우상단 -->
-                <circle cx="68" cy="32" r="3" fill="#0b132b" stroke="#8ce0ff" stroke-width="2"/>
-                <line x1="58" y1="32" x2="78" y2="32" stroke="#8ce0ff" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- 좌하단 -->
-                <circle cx="32" cy="68" r="3" fill="#0b132b" stroke="#8ce0ff" stroke-width="2"/>
-                <line x1="22" y1="68" x2="42" y2="68" stroke="#8ce0ff" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- 우하단 -->
-                <circle cx="68" cy="68" r="3" fill="#0b132b" stroke="#8ce0ff" stroke-width="2"/>
-                <line x1="58" y1="68" x2="78" y2="68" stroke="#8ce0ff" stroke-width="2.5" stroke-linecap="round"/>
-            </g>
-        </symbol>
-    </svg>
-
-    <header>
-        <a href="#" class="logo">
-            <div class="logo-icon-box">
-                <svg viewBox="0 0 100 100"><use href="#drone-recycle-icon"/></svg>
-            </div>
-            <span>wing again</span>
-        </a>
-        <nav>
-            <a href="#services">서비스</a>
-            <a href="#contact">문의하기</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-icon-box">
-            <svg viewBox="0 0 100 100"><use href="#drone-recycle-icon"/></svg>
-        </div>
-        <h1>wing again</h1>
-        <p>나 다시 날아갈래</p>
-    </section>
-
-    <!-- 서비스 및 가격 안내 섹션 -->
-    <section class="services" id="services">
-        <div class="card">
-            <div>
-                <span class="card-emoji">🛍️</span>
-                <h2>사줘드론</h2>
-                <p>신상 및 인기 최신 드론 맞춤 구매 추천 가이드</p>
-            </div>
-            <div>
-                <div class="card-price">최저가 견적 맞춤</div>
-                <button class="btn" onclick="alert('사줘드론 서비스 문의 페이지 준비 중입니다!')">구매 문의</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <span class="card-emoji">🛠️</span>
-                <h2>고쳐드론</h2>
-                <p>고장 나거나 파손된 드론 정밀 점검 및 수리</p>
-            </div>
-            <div>
-                <div class="card-price">진단비 무료 / 수리비 최저가</div>
-                <button class="btn" onclick="alert('고쳐드론 서비스 문의 페이지 준비 중입니다!')">수리 접수</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <span class="card-emoji">🤝</span>
-                <h2>빌려드론</h2>
-                <p>필요한 날짜만큼 부담 없이 단기 / 장기 대여</p>
-            </div>
-            <div>
-                <div class="card-price">일 15,000원 ~</div>
-                <button class="btn" onclick="alert('빌려드론 서비스 문의 페이지 준비 중입니다!')">대여 신청</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <span class="card-emoji">🏷️</span>
-                <h2>팔아드론</h2>
-                <p>더 이상 안 쓰는 중고 드론 즉시 최고가 매입</p>
-            </div>
-            <div>
-                <div class="card-price">당일 정산 / 최고가 매입</div>
+            box-shadow: 0 12px 24px rgba(
