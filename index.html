@@ -50,12 +50,23 @@
             text-decoration: none;
         }
 
-        /* 헤더 로고 이미지 크기 및 정비율 고정 */
-        .logo-img {
+        /* 헤더 로고 박스 */
+        .logo-icon-box {
             width: 40px;
             height: 40px;
-            object-fit: contain;
-            border-radius: 8px;
+            flex-shrink: 0;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon-box svg {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
 
         nav a {
@@ -79,32 +90,62 @@
             align-items: center;
         }
 
-        /* 메인 히어로 섹션 로고 이미지 크기 */
-        .hero-img {
+        /* 메인 중앙 로고 박스 */
+        .hero-icon-box {
             width: 130px;
             height: 130px;
-            object-fit: contain;
             margin-bottom: 1.5rem;
-            border-radius: 20px;
+            flex-shrink: 0;
+            background-color: #ffffff;
+            border-radius: 28px;
+            padding: 14px;
+            box-shadow: 0 10px 30px rgba(140, 224, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-icon-box svg {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
 
         .hero h1 {
             font-size: 3rem;
             color: var(--accent-color);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
             letter-spacing: -1px;
         }
 
-        .hero p {
+        .hero .sub-title {
             font-size: 1.4rem;
-            color: var(--text-sub);
+            color: #ffffff;
+            font-weight: 600;
             margin-bottom: 1rem;
+        }
+
+        /* 새로 추가된 회사 모토(슬로건) 스타일 */
+        .hero .motto {
+            font-size: 1rem;
+            color: var(--text-sub);
+            max-width: 600px;
+            line-height: 1.7;
+            word-break: keep-all;
+            background-color: rgba(28, 37, 65, 0.6);
+            padding: 1rem 1.8rem;
+            border-radius: 12px;
+            border: 1px solid rgba(140, 224, 255, 0.2);
+        }
+
+        .hero .motto strong {
+            color: var(--accent-color);
         }
 
         .services {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 2.5rem 1rem 4rem;
+            padding: 3rem 1rem 4rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1.8rem;
@@ -188,10 +229,45 @@
 </head>
 <body>
 
+    <!-- 흰색 배경 전용 연한 하늘색 재활용 드론 정밀 SVG 심볼 -->
+    <svg style="display: none;">
+        <symbol id="drone-recycle-icon" viewBox="0 0 100 100">
+            <!-- 3방향 재활용 순환 화살표 (연한 하늘색 #6bd2ff) -->
+            <path d="M 50 14 L 62 30 H 52 C 52 48 64 56 74 58 L 71 65 C 57 63 44 52 44 30 H 35 L 50 14 Z" fill="#6bd2ff"/>
+            <path d="M 23 60 C 31 44 45 38 53 38 L 50 45 L 70 41 L 62 23 L 58 30 C 47 30 31 38 20 58 L 23 60 Z" fill="#6bd2ff"/>
+            <path d="M 77 60 L 66 44 L 70 37 L 50 41 L 58 59 L 62 52 C 51 52 38 42 33 24 L 26 26 C 32 48 48 60 62 60 L 59 67 L 77 60 Z" fill="#6bd2ff"/>
+            
+            <!-- 드론 본체 및 프로펠러 (중앙 배치) -->
+            <g transform="translate(0, 0)">
+                <!-- 모터 연결 X 암 -->
+                <line x1="36" y1="36" x2="64" y2="64" stroke="#48cae4" stroke-width="4.5" stroke-linecap="round"/>
+                <line x1="64" y1="36" x2="36" y2="64" stroke="#48cae4" stroke-width="4.5" stroke-linecap="round"/>
+                
+                <!-- 중앙 카메라 렌즈 -->
+                <circle cx="50" cy="50" r="9" fill="#ffffff" stroke="#48cae4" stroke-width="3.5"/>
+                <circle cx="50" cy="50" r="3.5" fill="#48cae4"/>
+                
+                <!-- 4개 모터 및 프로펠러 -->
+                <circle cx="33" cy="33" r="2.5" fill="#ffffff" stroke="#48cae4" stroke-width="2"/>
+                <line x1="25" y1="33" x2="41" y2="33" stroke="#48cae4" stroke-width="2.5" stroke-linecap="round"/>
+                
+                <circle cx="67" cy="33" r="2.5" fill="#ffffff" stroke="#48cae4" stroke-width="2"/>
+                <line x1="59" y1="33" x2="75" y2="33" stroke="#48cae4" stroke-width="2.5" stroke-linecap="round"/>
+                
+                <circle cx="33" cy="67" r="2.5" fill="#ffffff" stroke="#48cae4" stroke-width="2"/>
+                <line x1="25" y1="67" x2="41" y2="67" stroke="#48cae4" stroke-width="2.5" stroke-linecap="round"/>
+                
+                <circle cx="67" cy="67" r="2.5" fill="#ffffff" stroke="#48cae4" stroke-width="2"/>
+                <line x1="59" y1="67" x2="75" y2="67" stroke="#48cae4" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+        </symbol>
+    </svg>
+
     <header>
         <a href="#" class="logo">
-            <!-- 로고 이미지 (logo.png) -->
-            <img src="logo.png" alt="wing again 로고" class="logo-img">
+            <div class="logo-icon-box">
+                <svg viewBox="0 0 100 100"><use href="#drone-recycle-icon"/></svg>
+            </div>
             <span>wing again</span>
         </a>
         <nav>
@@ -201,10 +277,17 @@
     </header>
 
     <section class="hero">
-        <!-- 메인 대형 로고 이미지 (logo.png) -->
-        <img src="logo.png" alt="wing again 대형 로고" class="hero-img">
+        <div class="hero-icon-box">
+            <svg viewBox="0 0 100 100"><use href="#drone-recycle-icon"/></svg>
+        </div>
         <h1>wing again</h1>
-        <p>나 다시 날아갈래</p>
+        <div class="sub-title">나 다시 날아갈래</div>
+        
+        <!-- 회사 모토 (슬로건) 섹션 -->
+        <div class="motto">
+            "버려지거나 방치된 드론에 <strong>새로운 날개</strong>를 달아드립니다.<br>
+            자원 순환과 기술 재활용으로 지속 가능한 비행을 이어가는 <strong>드론 전문 재활용 플렛폼</strong>입니다."
+        </div>
     </section>
 
     <section class="services" id="services">
