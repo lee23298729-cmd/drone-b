@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wing again - 나 다시 날아갈래</title>
+    <style>
+        :root {
+            --bg-color: #0b132b;
+            --card-bg: #1c2541;
+            --accent-color: #48cae4;
+            --accent-hover: #90e0ef;
+            --text-color: #ffffff;
+            --text-sub: #a0aec0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background-color: rgba(11, 19, 43, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .logo-svg {
+            width: 38px;
+            height: 38px;
+            vertical-align: middle;
+        }
+
+        nav a {
+            color: var(--text-sub);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 6rem 1rem;
+            background: radial-gradient(circle at center, #1c2541 0%, #0b132b 100%);
+        }
+
+        .hero-svg {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--text-sub);
+            margin-bottom: 2rem;
+        }
+
+        .services {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 20px rgba(72, 202, 228, 0.1);
+        }
+
+        .card-emoji {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .card h2 {
+            font-size: 1.35rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+            margin-bottom: 1.8rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.4rem;
+            background-color: var(--accent-color);
+            color: #000;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-sub);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">
+            <svg class="logo-svg" viewBox="0 0 100 100">
+                <path d="M50 15 A35 35 0 1 1 25 30" fill="none" stroke="#48cae4" stroke-width="7" stroke-linecap="round"/>
+                <path d="M25 18 L25 32 L39 32" fill="none" stroke="#48cae4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="50" cy="50" r="14" fill="none" stroke="#48cae4" stroke-width="5"/>
+                <circle cx="50" cy="50" r="4" fill="#48cae4"/>
+                <line x1="40" y1="40" x2="26" y2="26" stroke="#48cae4" stroke-width="4" stroke-linecap="round"/>
+                <line x1="60" y1="40" x2="74" y2="26" stroke="#48cae4" stroke-width="4" stroke-linecap="round"/>
+                <line x1="40" y1="60" x2="26" y2="74" stroke="#48cae4" stroke-width="4" stroke-linecap="round"/>
+                <line x1="60" y1="60" x2="74" y2="74" stroke="#48cae4" stroke-width="4" stroke-linecap="round"/>
+                <line x1="18" y1="26" x2="34" y2="26" stroke="#48cae4" stroke-width="3" stroke-linecap="round"/>
+                <line x1="66" y1="26" x2="82" y2="26" stroke="#48cae4" stroke-width="3" stroke-linecap="round"/>
+                <line x1="18" y1="74" x2="34" y2="74" stroke="#48cae4" stroke-width="3" stroke-linecap="round"/>
+                <line x1="66" y1="74" x2="82" y2="74" stroke="#48cae4" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span>wing again</span>
+        </a>
+        <nav>
+            <a href="#services">서비스</a>
+            <a href="#contact">문의하기</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <svg class="hero-svg" viewBox="0 0 100 100">
+            <path d="M50 15 A35 35 0 1 1 25 30" fill="none" stroke="#48cae4" stroke-width="7" stroke-linecap="round"/>
+            <path d="M25 18 L25 32 L39 32" fill="none" stroke="#48cae4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="50" cy="50" r="14" fill="none" stroke="#48cae4" stroke-width="5"/>
+            <circle cx="50" cy="50" r="4" fill="#48cae4"/>
+            <line x1="40" y1="40" x2="26" y2="26" stroke="#48cae4" stroke-width="4" stroke-linecap="round"/>
+            <line x1="60" y1="40" x2="74" y2="26" stroke="#48cae4" stroke-width="4" stroke-linecap="round"/>
+            <line x1="40" y1="60" x2="26" y2="74" stroke="#48cae4" stroke-width="4" stroke-linecap="round"/>
+            <line x1="60" y1="60" x2="74" y2="74" stroke="#48cae4" stroke-width="4" stroke-linecap="round"/>
+            <line x1="18" y1="26" x2="34" y2="26" stroke="#48cae4" stroke-width="3" stroke-linecap="round"/>
+            <line x1="66" y1="26" x2="82" y2="26" stroke="#48cae4" stroke-width="3" stroke-linecap="round"/>
+            <line x1="18" y1="74" x2="34" y2="74" stroke="#48cae4" stroke-width="3" stroke-linecap="round"/>
+            <line x1="66" y1="74" x2="82" y2="74" stroke="#48cae4" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <h1>wing again</h1>
+        <p>나 다시 날아갈래</p>
+    </section>
+
+    <section class="services" id="services">
+        <div class="card">
+            <span class="card-emoji">🛍️</span>
+            <h2>사줘드론</h2>
+            <p>신상 및 인기 드론 맞춤 구매 가이드</p>
+            <button class="btn" onclick="alert('사줘드론 서비스 문의 페이지 준비 중입니다!')">구매 문의</button>
+        </div>
+
+        <div class="card">
+            <span class="card-emoji">🛠️</span>
+            <h2>고쳐드론</h2>
+            <p>고장 난 드론 정밀 점검 및 수리</p>
+            <button class="btn" onclick="alert('고쳐드론 서비스 문의 페이지 준비 중입니다!')">수리 접수</button>
+        </div>
+
+        <div class="card">
+            <span class="card-emoji">🤝</span>
+            <h2>빌려드론</h2>
+            <p>필요한 만큼 단기 / 장기 대여</p>
+            <button class="btn" onclick="alert('빌려드론 서비스 문의 페이지 준비 중입니다!')">대여 신청</button>
+        </div>
+
+        <div class="card">
+            <span class="card-emoji">🏷️</span>
+            <h2>팔아드론</h2>
+            <p>안 쓰는 중고 드론 최고가 매입</p>
+            <button class="btn" onclick="alert('팔아드론 서비스 문의 페이지 준비 중입니다!')">매입 신청</button>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>© 2026 wing again. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
