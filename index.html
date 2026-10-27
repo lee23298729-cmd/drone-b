@@ -229,30 +229,35 @@
 </head>
 <body>
 
+    <!-- 단일 순환 화살표 + 중앙 드론 SVG 심볼 정의 -->
+    <svg style="display: none;">
+        <symbol id="drone-recycle-icon" viewBox="0 0 100 100">
+            <!-- 단일 원형 회전 화살표 -->
+            <path d="M 75 38 A 30 30 0 1 0 78 62" fill="none" stroke="#6bd2ff" stroke-width="6" stroke-linecap="round"/>
+            <path d="M 69 28 L 78 38 L 88 30" fill="none" stroke="#6bd2ff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            
+            <!-- 중앙 드론 -->
+            <g stroke="#3aa8db" stroke-width="3.2" stroke-linecap="round">
+                <line x1="38" y1="38" x2="62" y2="62"/>
+                <line x1="62" y1="38" x2="38" y2="62"/>
+                <circle cx="50" cy="50" r="9" fill="white" stroke-width="2.5"/>
+                <circle cx="50" cy="50" r="3.5" fill="#3aa8db"/>
+                <circle cx="34" cy="34" r="2" fill="white" stroke-width="1.5"/>
+                <line x1="28" y1="34" x2="40" y2="34" stroke-width="2"/>
+                <circle cx="66" cy="34" r="2" fill="white" stroke-width="1.5"/>
+                <line x1="60" y1="34" x2="72" y2="34" stroke-width="2"/>
+                <circle cx="34" cy="66" r="2" fill="white" stroke-width="1.5"/>
+                <line x1="28" y1="66" x2="40" y2="66" stroke-width="2"/>
+                <circle cx="66" cy="66" r="2" fill="white" stroke-width="1.5"/>
+                <line x1="60" y1="66" x2="72" y2="66" stroke-width="2"/>
+            </g>
+        </symbol>
+    </svg>
+
     <header>
         <a href="#" class="logo">
             <div class="logo-icon-box">
-                <svg viewBox="0 0 100 100" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M 50 12 L 78 12 C 85 12 90 17 90 24 L 78 50" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M 68 37 L 78 50 L 91 38" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M 76 72 L 32 72 C 25 72 20 67 20 60 L 32 35" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M 43 48 L 32 35 L 19 47" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M 24 35 C 24 20 37 12 50 12" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round"/>
-                    <g stroke="#3aa8db" stroke-width="3.5" stroke-linecap="round">
-                        <line x1="38" y1="38" x2="62" y2="62"/>
-                        <line x1="62" y1="38" x2="38" y2="62"/>
-                        <circle cx="50" cy="50" r="9" fill="white" stroke-width="3"/>
-                        <circle cx="50" cy="50" r="3.5" fill="#3aa8db"/>
-                        <circle cx="34" cy="34" r="2.5" fill="white" stroke-width="2"/>
-                        <line x1="27" y1="34" x2="41" y2="34" stroke-width="2.5"/>
-                        <circle cx="66" cy="34" r="2.5" fill="white" stroke-width="2"/>
-                        <line x1="59" y1="34" x2="73" y2="34" stroke-width="2.5"/>
-                        <circle cx="34" cy="66" r="2.5" fill="white" stroke-width="2"/>
-                        <line x1="27" y1="66" x2="41" y2="66" stroke-width="2.5"/>
-                        <circle cx="66" cy="66" r="2.5" fill="white" stroke-width="2"/>
-                        <line x1="59" y1="66" x2="73" y2="66" stroke-width="2.5"/>
-                    </g>
-                </svg>
+                <svg viewBox="0 0 100 100"><use href="#drone-recycle-icon"/></svg>
             </div>
             <span>wing again</span>
         </a>
@@ -264,27 +269,7 @@
 
     <section class="hero">
         <div class="hero-icon-box">
-            <svg viewBox="0 0 100 100" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 50 12 L 78 12 C 85 12 90 17 90 24 L 78 50" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M 68 37 L 78 50 L 91 38" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M 76 72 L 32 72 C 25 72 20 67 20 60 L 32 35" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M 43 48 L 32 35 L 19 47" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M 24 35 C 24 20 37 12 50 12" fill="none" stroke="#6bd2ff" stroke-width="7" stroke-linecap="round"/>
-                <g stroke="#3aa8db" stroke-width="3.5" stroke-linecap="round">
-                    <line x1="38" y1="38" x2="62" y2="62"/>
-                    <line x1="62" y1="38" x2="38" y2="62"/>
-                    <circle cx="50" cy="50" r="9" fill="white" stroke-width="3"/>
-                    <circle cx="50" cy="50" r="3.5" fill="#3aa8db"/>
-                    <circle cx="34" cy="34" r="2.5" fill="white" stroke-width="2"/>
-                    <line x1="27" y1="34" x2="41" y2="34" stroke-width="2.5"/>
-                    <circle cx="66" cy="34" r="2.5" fill="white" stroke-width="2"/>
-                    <line x1="59" y1="34" x2="73" y2="34" stroke-width="2.5"/>
-                    <circle cx="34" cy="66" r="2.5" fill="white" stroke-width="2"/>
-                    <line x1="27" y1="66" x2="41" y2="66" stroke-width="2.5"/>
-                    <circle cx="66" cy="66" r="2.5" fill="white" stroke-width="2"/>
-                    <line x1="59" y1="66" x2="73" y2="66" stroke-width="2.5"/>
-                </g>
-            </svg>
+            <svg viewBox="0 0 100 100"><use href="#drone-recycle-icon"/></svg>
         </div>
         <h1>wing again</h1>
         <div class="sub-title">나 다시 날아갈래</div>
