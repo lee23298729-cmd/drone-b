@@ -6,7 +6,7 @@
     <title>wing again - 나 다시 날아갈래</title>
     <style>
         :root {
-            --bg-color: #f7faff;
+            --bg-color: #f2f8fc;            /* 은은하고 부드러운 하늘색 배경 */
             --card-bg: #ffffff;
             --brand-color: #2b9dd1;
             --brand-dark: #1f7fae;
@@ -23,9 +23,7 @@
         }
 
         body {
-            background-color: var(--bg-color);
-            background-image: radial-gradient(#3aa8db 0.55px, transparent 0.55px);
-            background-size: 24px 24px;
+            background-color: var(--bg-color); /* 땡땡이 무늬 제거 완료 */
             color: var(--text-sub);
             line-height: 1.6;
             overflow-x: hidden;
@@ -175,7 +173,7 @@
 
         .services {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 기본 PC 화면: 무조건 2열(2x2) */
+            grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
         }
 
@@ -364,7 +362,7 @@
                 font-size: 0.9rem;
             }
             .services {
-                grid-template-columns: 1fr; /* 화면 폭이 좁아지면 모바일용 1열 변환 */
+                grid-template-columns: 1fr;
             }
             .card {
                 padding: 1.4rem 1.2rem;
