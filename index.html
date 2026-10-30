@@ -8,9 +8,9 @@
         :root {
             --bg-color: #f2f8fc;
             --card-bg: #ffffff;
-            --brand-color: #2b9dd1;            /* 로고 아이콘과 일치시킨 메인 하늘색 */
+            --brand-color: #2b9dd1;            /* 로고 및 메인 타이틀 색상 (진한 하늘색) */
             --brand-dark: #1f7fae;
-            --text-sky: #2b9dd1;               /* 서브 글씨도 아이콘 색상과 동일하게 통일 */
+            --text-sky: #5ab5df;               /* 부제목용으로 살짝 연하게 조절된 하늘색 */
             --text-sub: #4a6073;
             --border-color: #e3f0f9;
         }
@@ -119,14 +119,14 @@
 
         .hero h1 {
             font-size: 3.2rem;
-            color: var(--brand-color);
+            color: var(--brand-color); /* 아이콘과 동일한 진한 하늘색 유지 */
             margin-bottom: 0.3rem;
             letter-spacing: -1px;
         }
 
         .hero .sub-title {
             font-size: 1.4rem;
-            color: var(--text-sky);
+            color: var(--text-sky); /* 부제목은 살짝 연하게 */
             font-weight: 600;
             margin-bottom: 1.5rem;
         }
@@ -160,7 +160,7 @@
         .section-desc {
             text-align: center;
             font-size: 0.95rem;
-            color: var(--text-sky);
+            color: var(--text-sky); /* 섹션 설명도 연하게 통일 */
             margin-bottom: 2.8rem;
         }
 
@@ -203,7 +203,7 @@
         .card-tag {
             font-size: 0.8rem;
             font-weight: 800;
-            color: var(--brand-color); /* 태그 글씨도 아이콘 색상으로 일치 */
+            color: var(--text-sky);
             letter-spacing: 1px;
             margin-bottom: 0.3rem;
             text-transform: uppercase;
