@@ -6,12 +6,12 @@
     <title>wing again - 나 다시 날아갈래</title>
     <style>
         :root {
-            --bg-color: #f2f8fc;            /* 은은하고 부드러운 하늘색 배경 */
+            --bg-color: #f2f8fc;
             --card-bg: #ffffff;
-            --brand-color: #2b9dd1;
+            --brand-color: #2b9dd1;            /* 로고 아이콘과 일치시킨 메인 하늘색 */
             --brand-dark: #1f7fae;
-            --text-sky: #4baee3;
-            --text-sub: #63788a;
+            --text-sky: #2b9dd1;               /* 서브 글씨도 아이콘 색상과 동일하게 통일 */
+            --text-sub: #4a6073;
             --border-color: #e3f0f9;
         }
 
@@ -23,7 +23,7 @@
         }
 
         body {
-            background-color: var(--bg-color); /* 땡땡이 무늬 제거 완료 */
+            background-color: var(--bg-color);
             color: var(--text-sub);
             line-height: 1.6;
             overflow-x: hidden;
@@ -203,7 +203,7 @@
         .card-tag {
             font-size: 0.8rem;
             font-weight: 800;
-            color: #1c2541;
+            color: var(--brand-color); /* 태그 글씨도 아이콘 색상으로 일치 */
             letter-spacing: 1px;
             margin-bottom: 0.3rem;
             text-transform: uppercase;
