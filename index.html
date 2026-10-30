@@ -8,9 +8,9 @@
         :root {
             --bg-color: #f2f8fc;
             --card-bg: #ffffff;
-            --brand-color: #2b9dd1;            /* 로고 및 메인 타이틀 색상 (진한 하늘색) */
-            --brand-dark: #1f7fae;
-            --text-sky: #5ab5df;               /* 부제목용으로 살짝 연하게 조절된 하늘색 */
+            --brand-color: #4baee3;            /* WA 로고 아이콘과 완벽 일치하는 밝은 하늘색 */
+            --brand-dark: #2b9dd1;
+            --text-sky: #6ebde6;               /* 부제목용 살짝 연하고 부드러운 하늘색 */
             --text-sub: #4a6073;
             --border-color: #e3f0f9;
         }
@@ -74,7 +74,7 @@
         }
 
         nav a {
-            color: var(--text-sky);
+            color: var(--brand-color);
             text-decoration: none;
             margin-left: 1.8rem;
             transition: color 0.3s;
@@ -103,7 +103,7 @@
             border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 10px;
-            box-shadow: 0 12px 30px rgba(43, 157, 209, 0.12);
+            box-shadow: 0 12px 30px rgba(75, 174, 227, 0.15);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -119,14 +119,14 @@
 
         .hero h1 {
             font-size: 3.2rem;
-            color: var(--brand-color); /* 아이콘과 동일한 진한 하늘색 유지 */
+            color: var(--brand-color); /* 로고 아이콘과 똑같은 밝은 하늘색 */
             margin-bottom: 0.3rem;
             letter-spacing: -1px;
         }
 
         .hero .sub-title {
             font-size: 1.4rem;
-            color: var(--text-sky); /* 부제목은 살짝 연하게 */
+            color: var(--text-sky); /* 부제목은 더 연한 하늘색 */
             font-weight: 600;
             margin-bottom: 1.5rem;
         }
@@ -142,7 +142,7 @@
             padding: 1.3rem 2.2rem;
             border-radius: 16px;
             border: 1px solid var(--border-color);
-            box-shadow: 0 6px 20px rgba(43, 157, 209, 0.06);
+            box-shadow: 0 6px 20px rgba(75, 174, 227, 0.08);
         }
 
         .hero .motto strong {
@@ -160,11 +160,10 @@
         .section-desc {
             text-align: center;
             font-size: 0.95rem;
-            color: var(--text-sky); /* 섹션 설명도 연하게 통일 */
+            color: var(--text-sky);
             margin-bottom: 2.8rem;
         }
 
-        /* 서비스 섹션 - PC 기준 2x2 고정 */
         .services-section {
             max-width: 1000px;
             margin: 0 auto 5rem;
@@ -186,13 +185,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 4px 15px rgba(43, 157, 209, 0.05);
+            box-shadow: 0 4px 15px rgba(75, 174, 227, 0.06);
         }
 
         .card:hover {
             transform: translateY(-4px);
             border-color: var(--brand-color);
-            box-shadow: 0 12px 25px rgba(43, 157, 209, 0.12);
+            box-shadow: 0 12px 25px rgba(75, 174, 227, 0.15);
         }
 
         .card-content {
@@ -238,7 +237,7 @@
             background-color: #f0f8ff;
             padding: 0.4rem 0.6rem;
             border-radius: 8px;
-            border: 1px dashed rgba(43, 157, 209, 0.3);
+            border: 1px dashed rgba(75, 174, 227, 0.4);
             text-align: center;
             width: 100%;
             word-break: keep-all;
@@ -282,7 +281,7 @@
             border-radius: 16px;
             padding: 1.8rem 1.2rem;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(43, 157, 209, 0.04);
+            box-shadow: 0 4px 12px rgba(75, 174, 227, 0.05);
         }
 
         .step-num {
@@ -322,7 +321,7 @@
             border-radius: 18px;
             padding: 3.5rem 1.5rem;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(43, 157, 209, 0.03);
+            box-shadow: 0 4px 15px rgba(75, 174, 227, 0.04);
         }
 
         .empty-icon {
@@ -352,7 +351,6 @@
             background-color: #ffffff;
         }
 
-        /* 모바일/태블릿용 반응형 미디어 쿼리 */
         @media (max-width: 768px) {
             header {
                 padding: 1.2rem 1.5rem;
