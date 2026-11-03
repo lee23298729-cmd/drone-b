@@ -8,7 +8,7 @@
         :root {
             --bg-color: #f2f8fc;
             --card-bg: #ffffff;
-            --brand-color: #4baee3;            /* 로고 아이콘과 일치하는 밝은 하늘색 (메인 타이틀용) */
+            --brand-color: #4baee3;            /* 로고 아이콘과 일치하는 밝은 하늘색 */
             --brand-dark: #2b9dd1;
             --text-sky: #6ebde6;               /* 연한 하늘색 (부제목 및 설명용) */
             --text-dark: #111111;              /* 중요 강조 글씨 (검은색) */
@@ -48,7 +48,7 @@
             gap: 12px;
             font-size: 1.5rem;
             font-weight: 800;
-            color: var(--brand-color);
+            color: #4baee3 !important; /* 상단 로고: 로고 아이콘과 동일한 하늘색 */
             text-decoration: none;
         }
 
@@ -74,7 +74,7 @@
         }
 
         nav a {
-            color: var(--text-sky);
+            color: #6ebde6 !important; /* 상단 메뉴: 연한 하늘색 */
             text-decoration: none;
             margin-left: 1.8rem;
             transition: color 0.3s;
@@ -83,7 +83,7 @@
         }
 
         nav a:hover {
-            color: var(--text-dark);
+            color: #111111 !important;
         }
 
         .hero {
@@ -117,26 +117,27 @@
             display: block;
         }
 
-        /* wing again 타이틀: 로고 아이콘과 똑같은 밝은 하늘색 */
+        /* 메인 타이틀: 로고 아이콘과 똑같은 밝은 하늘색 직접 고정 */
         .hero h1 {
             font-size: 3.2rem;
-            color: var(--brand-color);
+            color: #4baee3 !important;
             margin-bottom: 0.3rem;
             letter-spacing: -1px;
             font-weight: 800;
         }
 
-        /* 그 밑에 설명 및 부제목: 연한 하늘색 */
+        /* 메인 부제목: 연한 하늘색 직접 고정 */
         .hero .sub-title {
             font-size: 1.4rem;
-            color: var(--text-sky);
+            color: #6ebde6 !important;
             font-weight: 600;
             margin-bottom: 1.5rem;
         }
 
+        /* 설명 박스 문구: 연한 하늘색 */
         .hero .motto {
             font-size: 1rem;
-            color: var(--text-sky);
+            color: #6ebde6 !important;
             max-width: 620px;
             width: 100%;
             line-height: 1.7;
@@ -149,13 +150,13 @@
         }
 
         .hero .motto strong {
-            color: var(--text-dark);
+            color: #111111 !important;
         }
 
         .section-title {
             text-align: center;
             font-size: 1.8rem;
-            color: var(--text-dark);
+            color: #111111 !important;
             margin-bottom: 0.4rem;
             font-weight: 800;
         }
@@ -163,7 +164,7 @@
         .section-desc {
             text-align: center;
             font-size: 0.95rem;
-            color: var(--text-sky);
+            color: #6ebde6 !important;
             margin-bottom: 2.8rem;
         }
 
@@ -193,7 +194,7 @@
 
         .card:hover {
             transform: translateY(-4px);
-            border-color: var(--brand-color);
+            border-color: #4baee3;
             box-shadow: 0 12px 25px rgba(75, 174, 227, 0.15);
         }
 
@@ -205,7 +206,7 @@
         .card-tag {
             font-size: 0.8rem;
             font-weight: 800;
-            color: var(--text-sky);
+            color: #6ebde6 !important;
             letter-spacing: 1px;
             margin-bottom: 0.3rem;
             text-transform: uppercase;
@@ -213,14 +214,14 @@
 
         .card h2 {
             font-size: 1.6rem;
-            color: var(--text-dark);
+            color: #111111 !important;
             margin-bottom: 0.4rem;
             font-weight: 800;
         }
 
         .card p {
             font-size: 0.92rem;
-            color: var(--text-sky);
+            color: #6ebde6 !important;
             word-break: keep-all;
         }
 
@@ -236,7 +237,7 @@
         .card-price {
             font-size: 0.85rem;
             font-weight: 700;
-            color: var(--text-dark);
+            color: #111111 !important;
             background-color: #f0f8ff;
             padding: 0.4rem 0.6rem;
             border-radius: 8px;
@@ -250,7 +251,7 @@
             display: inline-block;
             width: 100%;
             padding: 0.75rem 1rem;
-            background-color: var(--brand-color);
+            background-color: #4baee3;
             color: #ffffff;
             font-weight: 700;
             border-radius: 8px;
@@ -263,7 +264,7 @@
         }
 
         .btn:hover {
-            background-color: var(--brand-dark);
+            background-color: #2b9dd1;
         }
 
         .process-section {
@@ -292,7 +293,7 @@
             width: 36px;
             height: 36px;
             line-height: 36px;
-            background-color: var(--brand-color);
+            background-color: #4baee3;
             color: #ffffff;
             font-weight: 800;
             border-radius: 50%;
@@ -302,14 +303,14 @@
 
         .process-step h3 {
             font-size: 1.15rem;
-            color: var(--text-dark);
+            color: #111111 !important;
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
 
         .process-step p {
             font-size: 0.88rem;
-            color: var(--text-sky);
+            color: #6ebde6 !important;
             line-height: 1.5;
         }
 
@@ -337,21 +338,21 @@
 
         .empty-review-box h3 {
             font-size: 1.25rem;
-            color: var(--text-dark);
+            color: #111111 !important;
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
 
         .empty-review-box p {
             font-size: 0.95rem;
-            color: var(--text-sky);
+            color: #6ebde6 !important;
         }
 
         footer {
             text-align: center;
             padding: 2.5rem;
             border-top: 1px solid var(--border-color);
-            color: var(--text-sky);
+            color: #6ebde6 !important;
             font-size: 0.9rem;
             background-color: #ffffff;
         }
