@@ -8,10 +8,10 @@
         :root {
             --bg-color: #f2f8fc;
             --card-bg: #ffffff;
-            --brand-color: #4baee3;            /* WA 로고 아이콘과 완벽 일치하는 밝은 하늘색 */
+            --brand-color: #4baee3;            /* 메인 대표 하늘색 */
             --brand-dark: #2b9dd1;
-            --text-sky: #6ebde6;               /* 부제목용 살짝 연하고 부드러운 하늘색 */
-            --text-sub: #4a6073;
+            --text-sky: #6ebde6;               /* 연한 하늘색 글씨 */
+            --text-dark: #111111;              /* 중요 강조 글씨 (검은색) */
             --border-color: #e3f0f9;
         }
 
@@ -24,7 +24,7 @@
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-sub);
+            color: var(--text-sky);             /* 기본 일반 글씨: 연한 하늘색 */
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -47,7 +47,7 @@
             align-items: center;
             gap: 12px;
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--brand-color);
             text-decoration: none;
         }
@@ -74,7 +74,7 @@
         }
 
         nav a {
-            color: var(--brand-color);
+            color: var(--text-sky);
             text-decoration: none;
             margin-left: 1.8rem;
             transition: color 0.3s;
@@ -83,7 +83,7 @@
         }
 
         nav a:hover {
-            color: var(--brand-dark);
+            color: var(--text-dark);
         }
 
         .hero {
@@ -117,23 +117,26 @@
             display: block;
         }
 
+        /* 중요 메인 타이틀: 검은색 */
         .hero h1 {
             font-size: 3.2rem;
-            color: var(--brand-color); /* 로고 아이콘과 똑같은 밝은 하늘색 */
+            color: var(--text-dark);
             margin-bottom: 0.3rem;
             letter-spacing: -1px;
+            font-weight: 800;
         }
 
+        /* 일반 부제목: 연한 하늘색 */
         .hero .sub-title {
             font-size: 1.4rem;
-            color: var(--text-sky); /* 부제목은 더 연한 하늘색 */
+            color: var(--text-sky);
             font-weight: 600;
             margin-bottom: 1.5rem;
         }
 
         .hero .motto {
             font-size: 1rem;
-            color: var(--text-sub);
+            color: var(--text-sky);
             max-width: 620px;
             width: 100%;
             line-height: 1.7;
@@ -146,17 +149,19 @@
         }
 
         .hero .motto strong {
-            color: var(--brand-color);
+            color: var(--text-dark);
         }
 
+        /* 중요 섹션 제목: 검은색 */
         .section-title {
             text-align: center;
             font-size: 1.8rem;
-            color: var(--brand-color);
+            color: var(--text-dark);
             margin-bottom: 0.4rem;
-            font-weight: 700;
+            font-weight: 800;
         }
 
+        /* 일반 섹션 설명: 연한 하늘색 */
         .section-desc {
             text-align: center;
             font-size: 0.95rem;
@@ -165,21 +170,22 @@
         }
 
         .services-section {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto 5rem;
             padding: 0 1rem;
         }
 
+        /* PC 기준 3개 카드 배치 */
         .services {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
         }
 
         .card {
             background-color: var(--card-bg);
             border-radius: 20px;
-            padding: 1.8rem 2rem;
+            padding: 1.8rem 1.8rem;
             border: 1px solid var(--border-color);
             transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
             display: flex;
@@ -208,16 +214,18 @@
             text-transform: uppercase;
         }
 
+        /* 중요 카드 제목: 검은색 */
         .card h2 {
-            font-size: 1.5rem;
-            color: #1c2541;
+            font-size: 1.6rem;
+            color: var(--text-dark);
             margin-bottom: 0.4rem;
-            font-weight: 700;
+            font-weight: 800;
         }
 
+        /* 일반 설명 글씨: 연한 하늘색 */
         .card p {
             font-size: 0.92rem;
-            color: var(--text-sub);
+            color: var(--text-sky);
             word-break: keep-all;
         }
 
@@ -226,14 +234,14 @@
             flex-direction: column;
             align-items: flex-end;
             gap: 0.8rem;
-            min-width: 125px;
+            min-width: 115px;
             flex-shrink: 0;
         }
 
         .card-price {
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             font-weight: 700;
-            color: var(--brand-color);
+            color: var(--text-dark);
             background-color: #f0f8ff;
             padding: 0.4rem 0.6rem;
             border-radius: 8px;
@@ -297,15 +305,18 @@
             font-size: 0.95rem;
         }
 
+        /* 중요 프로세스 단계 제목: 검은색 */
         .process-step h3 {
             font-size: 1.15rem;
-            color: var(--brand-color);
+            color: var(--text-dark);
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
+        /* 일반 프로세스 설명: 연한 하늘색 */
         .process-step p {
             font-size: 0.88rem;
-            color: var(--text-sub);
+            color: var(--text-sky);
             line-height: 1.5;
         }
 
@@ -333,8 +344,9 @@
 
         .empty-review-box h3 {
             font-size: 1.25rem;
-            color: var(--brand-color);
+            color: var(--text-dark);
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         .empty-review-box p {
@@ -403,60 +415,48 @@
         </div>
     </section>
 
+    <!-- 조합 B 기반 3개 서비스 카드로 새로 제작 -->
     <section class="services-section" id="services">
         <h2 class="section-title">맞춤형 드론 서비스</h2>
         <p class="section-desc">필요하신 드론 서비스를 클릭해 문의하세요.</p>
 
         <div class="services">
-            <!-- 사줘드론 -->
+            <!-- 1. 맞춤제작 -->
             <div class="card">
                 <div class="card-content">
-                    <div class="card-tag">BUY</div>
-                    <h2>사줘드론</h2>
-                    <p>리퍼비쉬 드론 최저가 맞춤.</p>
+                    <div class="card-tag">CUSTOM</div>
+                    <h2>맞춤제작</h2>
+                    <p>커스텀 드론 부품 맞춤 3D 설계 및 제작.</p>
                 </div>
                 <div class="card-action-area">
-                    <div class="card-price">최저가 맞춤</div>
-                    <button class="btn" onclick="alert('사줘드론 서비스 문의 페이지 준비 중입니다!')">구매 문의</button>
+                    <div class="card-price">맞춤 제작</div>
+                    <button class="btn" onclick="alert('맞춤제작 서비스 문의 페이지 준비 중입니다!')">제작 문의</button>
                 </div>
             </div>
 
-            <!-- 고쳐드론 -->
+            <!-- 2. 정밀진단 -->
             <div class="card">
                 <div class="card-content">
                     <div class="card-tag">REPAIR</div>
-                    <h2>고쳐드론</h2>
-                    <p>무료 진단 및 수리.</p>
+                    <h2>정밀진단</h2>
+                    <p>고장 부품 맞춤 진단 및 수리·교체.</p>
                 </div>
                 <div class="card-action-area">
                     <div class="card-price">무료 진단</div>
-                    <button class="btn" onclick="alert('고쳐드론 서비스 문의 페이지 준비 중입니다!')">수리 접수</button>
+                    <button class="btn" onclick="alert('정밀진단 서비스 문의 페이지 준비 중입니다!')">진단 신청</button>
                 </div>
             </div>
 
-            <!-- 빌려드론 -->
+            <!-- 3. 도면의뢰 -->
             <div class="card">
                 <div class="card-content">
-                    <div class="card-tag">RENT</div>
-                    <h2>빌려드론</h2>
-                    <p>부담 없는 단기 및 장기 대여.</p>
+                    <div class="card-tag">DESIGN</div>
+                    <h2>도면의뢰</h2>
+                    <p>드론 파츠 정밀 3D CAD 및 도면 설계.</p>
                 </div>
                 <div class="card-action-area">
-                    <div class="card-price">일 15,000원 ~</div>
-                    <button class="btn" onclick="alert('빌려드론 서비스 문의 페이지 준비 중입니다!')">대여 신청</button>
-                </div>
-            </div>
-
-            <!-- 팔아드론 -->
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-tag">SELL</div>
-                    <h2>팔아드론</h2>
-                    <p>중고 드론 당일 정산 최고가 매입.</p>
-                </div>
-                <div class="card-action-area">
-                    <div class="card-price">당일 정산</div>
-                    <button class="btn" onclick="alert('팔아드론 서비스 문의 페이지 준비 중입니다!')">매입 신청</button>
+                    <div class="card-price">도면 설계</div>
+                    <button class="btn" onclick="alert('도면의뢰 서비스 문의 페이지 준비 중입니다!')">의뢰 신청</button>
                 </div>
             </div>
         </div>
@@ -470,7 +470,7 @@
             <div class="process-step">
                 <span class="step-num">1</span>
                 <h3>서비스 신청</h3>
-                <p>원하시는 서비스(수리/매입/대여)를 온라인으로 신청합니다.</p>
+                <p>원하시는 서비스(제작/진단/의뢰)를 온라인으로 신청합니다.</p>
             </div>
             <div class="process-step">
                 <span class="step-num">2</span>
@@ -485,7 +485,7 @@
             <div class="process-step">
                 <span class="step-num">4</span>
                 <h3>완료 & 정산</h3>
-                <p>수리 완료품 발송 또는 당일 정산 입금이 진행됩니다.</p>
+                <p>작업 완료품 발송 또는 수령이 진행됩니다.</p>
             </div>
         </div>
     </section>
