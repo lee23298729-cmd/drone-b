@@ -8,9 +8,9 @@
         :root {
             --bg-color: #f2f8fc;
             --card-bg: #ffffff;
-            --brand-color: #4baee3;            /* 메인 대표 하늘색 */
+            --brand-color: #4baee3;            /* 로고 아이콘과 일치하는 밝은 하늘색 (메인 타이틀용) */
             --brand-dark: #2b9dd1;
-            --text-sky: #6ebde6;               /* 연한 하늘색 글씨 */
+            --text-sky: #6ebde6;               /* 연한 하늘색 (부제목 및 설명용) */
             --text-dark: #111111;              /* 중요 강조 글씨 (검은색) */
             --border-color: #e3f0f9;
         }
@@ -24,7 +24,7 @@
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-sky);             /* 기본 일반 글씨: 연한 하늘색 */
+            color: var(--text-sky);
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -117,16 +117,16 @@
             display: block;
         }
 
-        /* 중요 메인 타이틀: 검은색 */
+        /* wing again 타이틀: 로고 아이콘과 똑같은 밝은 하늘색 */
         .hero h1 {
             font-size: 3.2rem;
-            color: var(--text-dark);
+            color: var(--brand-color);
             margin-bottom: 0.3rem;
             letter-spacing: -1px;
             font-weight: 800;
         }
 
-        /* 일반 부제목: 연한 하늘색 */
+        /* 그 밑에 설명 및 부제목: 연한 하늘색 */
         .hero .sub-title {
             font-size: 1.4rem;
             color: var(--text-sky);
@@ -152,7 +152,6 @@
             color: var(--text-dark);
         }
 
-        /* 중요 섹션 제목: 검은색 */
         .section-title {
             text-align: center;
             font-size: 1.8rem;
@@ -161,7 +160,6 @@
             font-weight: 800;
         }
 
-        /* 일반 섹션 설명: 연한 하늘색 */
         .section-desc {
             text-align: center;
             font-size: 0.95rem;
@@ -175,7 +173,6 @@
             padding: 0 1rem;
         }
 
-        /* PC 기준 3개 카드 배치 */
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -214,7 +211,6 @@
             text-transform: uppercase;
         }
 
-        /* 중요 카드 제목: 검은색 */
         .card h2 {
             font-size: 1.6rem;
             color: var(--text-dark);
@@ -222,7 +218,6 @@
             font-weight: 800;
         }
 
-        /* 일반 설명 글씨: 연한 하늘색 */
         .card p {
             font-size: 0.92rem;
             color: var(--text-sky);
@@ -305,7 +300,6 @@
             font-size: 0.95rem;
         }
 
-        /* 중요 프로세스 단계 제목: 검은색 */
         .process-step h3 {
             font-size: 1.15rem;
             color: var(--text-dark);
@@ -313,7 +307,6 @@
             font-weight: 700;
         }
 
-        /* 일반 프로세스 설명: 연한 하늘색 */
         .process-step p {
             font-size: 0.88rem;
             color: var(--text-sky);
@@ -415,7 +408,6 @@
         </div>
     </section>
 
-    <!-- 조합 B 기반 3개 서비스 카드로 새로 제작 -->
     <section class="services-section" id="services">
         <h2 class="section-title">맞춤형 드론 서비스</h2>
         <p class="section-desc">필요하신 드론 서비스를 클릭해 문의하세요.</p>
