@@ -6,7 +6,7 @@
     <title>wing again - 나 다시 날아갈래</title>
     <style>
         :root {
-            --bg-color: #fbfbfd;               /* 애플 특유의 오프화이트 배경 */
+            --bg-color: #fbfbfd;               /* 애플 지원 페이지 특유의 오프화이트 배경 */
             --card-bg: #ffffff;
             --brand-sky: #4baee3;              /* 로고 아이콘 포인트 하늘색 */
             --brand-sky-hover: #3a97cb;
@@ -70,22 +70,25 @@
             letter-spacing: -0.01em;
         }
 
+        /* 상단 네모 아이콘 박스 */
         .logo-icon-box {
-            width: 32px;
+            width: 48px;
             height: 32px;
-            border-radius: 50%;
+            border-radius: 8px;
             background-color: #ffffff;
+            border: 1px solid var(--border-color);
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding: 2px;
         }
 
         .logo-icon-box img {
-            width: 80%;
-            height: 80%;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
+            display: block;
         }
 
         nav a {
@@ -101,7 +104,7 @@
             color: var(--brand-sky);
         }
 
-        /* Hero 섹션: 애플 지원 스타일 중앙 로고 & 타이틀 */
+        /* Hero 섹션 */
         .hero {
             text-align: center;
             padding: 5rem 1rem 4rem;
@@ -110,25 +113,27 @@
             align-items: center;
         }
 
-        /* 애플 지원 메인 원형 아이콘 스타일 */
-        .hero-apple-icon {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #4baee3 0%, #3aa8db 100%);
+        /* 메인 네모 로고 아이콘 박스 */
+        .hero-icon-box {
+            width: 220px;
+            height: 100px;
+            border-radius: 20px;
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1.8rem;
-            box-shadow: 0 10px 25px rgba(75, 174, 227, 0.3);
-            padding: 20px;
+            box-shadow: 0 12px 30px rgba(75, 174, 227, 0.12);
+            padding: 12px;
+            overflow: hidden;
         }
 
-        .hero-apple-icon img {
+        .hero-icon-box img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            filter: brightness(0) invert(1); /* 아이콘을 애플 스타일 흰색으로 투영 */
+            display: block;
         }
 
         .hero h1 {
@@ -266,7 +271,6 @@
             word-break: keep-all;
         }
 
-        /* 애플 버튼 스타일 */
         .btn {
             display: inline-block;
             width: 100%;
@@ -274,7 +278,7 @@
             background-color: var(--brand-sky);
             color: #ffffff;
             font-weight: 500;
-            border-radius: 980px; /* 애플 라운드 피치 버튼 */
+            border-radius: 980px;
             text-decoration: none;
             cursor: pointer;
             border: none;
@@ -341,7 +345,7 @@
             line-height: 1.45;
         }
 
-        /* 후기 섹션 애플 스타일 */
+        /* 후기 섹션 */
         .reviews-section {
             max-width: 1024px;
             margin: 0 auto 6rem;
@@ -376,7 +380,6 @@
             color: var(--text-subtle);
         }
 
-        /* 푸터 */
         footer {
             text-align: center;
             padding: 2.5rem 1rem;
@@ -386,7 +389,6 @@
             background-color: #f5f5f7;
         }
 
-        /* 반응형 모바일 설정 */
         @media (max-width: 768px) {
             header {
                 padding: 0 1rem;
@@ -434,12 +436,11 @@
     </header>
 
     <section class="hero">
-        <!-- 애플 지원 스타일 메인 원형 아이콘 파트 -->
-        <div class="hero-apple-icon">
-            <img src="창업 팀플 과제.png" alt="wing again 대표 아이콘">
+        <div class="hero-icon-box">
+            <img src="창업 팀플 과제.png" alt="wing again 메인 로고">
         </div>
         <h1>wing again</h1>
-        <div class="sub-title">도움이 필요하십니까? 여기에서 시작하세요.</div>
+        <div class="sub-title">도움이 필요하습니까? 여기에서 시작하세요.</div>
         
         <div class="motto">
             "버려지거나 방치된 드론에 <strong>새로운 날개</strong>를 달아드립니다.<br>
@@ -447,7 +448,6 @@
         </div>
     </section>
 
-    <!-- 2개 맞춤 서비스 섹션 -->
     <section class="services-section" id="services">
         <h2 class="section-title">맞춤형 드론 서비스</h2>
         <p class="section-desc">필요하신 드론 서비스를 선택해 문의하세요.</p>
